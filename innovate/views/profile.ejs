@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>innovate</title>
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="profile.css">    
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <script src="profile.js"></script>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        overflow: auto;
+      }
+
+    </style>
+
+
+  </head>
+  
+<body style="margin:0;min-width: 1100px;">
+  <header id="header">
+      <a href="/" class="brand" id="in" style="text-decoration:none" tabindex="8">innovate</a>
+
+      <ul class="header_list">
+        <li><a href="#account" id="acct" tabindex="7">Account</a></li>
+        <li><a href="/profile" id="prof" tabindex="6">Profile</a></li>  
+        <li><a href="/pitches" id="pitch" tabindex="5">Pitches</a></li>
+      </ul>
+  </header>
+
+  <div id="top">
+    <span id="name">DJ Jagannathan</span>
+    <a href="/new" id="newProject" tabindex="4">Start new project</a>
+  </div>  
+    <br><br>
+  <div id="nav">
+    <ul class="nav_list">
+    <li id="navPort" onfocus="showPort();" class="selectedPort" tabindex="3">Portfolio</li>
+    <li id="navProj" onfocus="showProj();" tabindex="1">Project</li>
+    <li id="navProg" onfocus="showProg();" tabindex="2">Progress</li>
+
+          <script>
+          $("document").ready(function(){
+          $('li#navPort').focus(function(){
+            $('li#navPort').addClass("selectedPort");
+          })
+          $("li#navPort").focus(function() {
+            $('li#navProj').removeClass("selectedProj");
+            })
+          $("li#navPort").focus(function() {
+            $('li#navProg').removeClass("selectedProg");
+            });
+          });          
+          </script>
+          <script>
+          $("document").ready(function(){
+          $('li#navProj').focus(function(){
+            $('li#navProj').addClass("selectedProj");
+          })
+          $("li#navProj").focus(function() {
+            $('li#navPort').removeClass("selectedPort");
+            })
+          $("li#navProj").focus(function() {
+            $('li#navProg').removeClass("selectedProg");
+            });
+          });          
+          </script>
+          <script>
+          $("document").ready(function(){
+          $('li#navProg').focus(function(){
+            $('li#navProg').addClass("selectedProg");
+          })
+          $("li#navProg").focus(function() {
+            $('li#navPort').removeClass("selectedPort");
+            })
+          $("li#navProg").focus(function() {
+            $('li#navProj').removeClass("selectedProj");
+            });
+          });          
+          </script>  
+
+<!--Clicking current project name in portfolio-->
+          <script>
+          $("document").ready(function(){
+          $('ul#currentInfo').click(function(){
+            $('li#navProj').addClass("selectedProj");
+          })
+          $("ul#currentInfo").click(function() {
+            $('li#navPort').removeClass("selectedPort");
+            })
+          $("ul#currentInfo").focus(function() {
+            $('li#navProg').removeClass("selectedProg");
+            });
+          });          
+          </script>   
+<!--end clicking current project name in portfolio-->
+
+    </ul>
+
+  </div>
+
+  <div id="content">
+    <div id="contentWrap">
+      <div id="portfolioContent">
+        <div id="basicInfo">
+          <img class="profile_pic" id="portfolioPic" src="tempPic.jpg">
+          <div id="schoolStuff">
+            <span id="schoolName">John Jay High School</span><br>
+            <span id="schoolLocation">Hopewell Junction, New York</span>
+          </div>
+        </div>
+        <div id="previousProjects">
+          <br>
+          <span class="profile_label">Current Project:</span><br>
+          <ul id="currentInfo" class="project_portfolio_list" onclick="showProj();">
+            <li id="currentName">Apple Computers</li>
+            <li id="currentTime">1976 - present</li>
+          </ul>
+          <span class="profile_label">Past Projects:</span><br><br>
+          <table id="pastInfo">
+            <tr class="past_project first">
+              <td id="pastName" >Stamp.fm</td>
+              <td id="pastTime">May, 2013 - September, 2013</td>
+            </tr>
+            <tr class="past_project">
+              <td id="pastName">Save the Monkeys</td>
+              <td id="pastTime">October, 2011 - June, 2012</td>
+            </tr>
+            <tr class="past_project">
+              <td id="pastName">Save the Trees</td>
+              <td id="pastTime">October, 2010 - June, 2011</td>
+            </tr>  
+            <tr class="past_project">
+              <td id="pastName">Save the Bros</td>
+              <td id="pastTime">October, 2010 - June, 2011</td>
+            </tr>   
+            <tr class="past_project">
+              <td id="pastName">Be Awesome!</td>
+              <td id="pastTime">October, 2009 - June, 2010</td>
+            </tr>                                                             
+          </table>  
+        </div>  
+      </div>
+
+      <div id="projectContent" style="display:none;">
+        <div id="projectInfo">
+          <img class="profile_pic" id="logo" src="tempLogo.png">
+          <div id="projectStuff">
+            <span id="projectName">Apple Computers</span><br>
+            <ul id="teamMembers">
+             <li>DJ Jagannathan</li>
+             <li>Steve Jobs</li>
+             <li>Steve Wozniak</li>
+            </ul>
+            <span>Tags</span>
+            <ul id="tagList">
+              <li>#computers</li>
+              <li>#programming</li>
+              <li>#forprofit</li>
+              <li>#apple</li>
+            </ul>
+          </div>
+          <div id="projectPitch">
+            <iframe width="300" height="150" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe><br>
+            <input id="request" type="submit" class="buttonBlue" value="Request to Join">
+          </div>
+        </div>
+        <div id="projectDescription">
+          <p>
+          Apple Inc., formerly Apple Computer, Inc., is an American multinational corporation headquartered in Cupertino, California[2] that designs, develops, and sells consumer electronics, computer software and personal computers. Its best-known hardware products are the Mac line of computers, the iPod music player, the iPhone smartphone, and the iPad tablet computer. Its consumer software includes the OS X and iOS operating systems, the iTunes media browser, the Safari web browser, and the iLife and iWork creativity and production suites.
+          The company was founded on April 1, 1976, and incorporated as Apple Computer, Inc. on January 3, 1977.[6] The word "Computer" was removed from its name on January 9, 2007, reflecting its shifted focus towards consumer electronics after the introduction of the iPhone.[7][8][9]
+          Apple is the world's second-largest information technology company by revenue after Samsung Electronics, and the world's third-largest mobile phone maker after Samsung and Nokia.[10] Fortune magazine named Apple the most admired company in the United States in 2008, and in the world from 2008 to 2012.[11][12][13][14][15] However, the company has received criticism for its contractors' labor practices, and for Apple's own environmental and business practices.[16][17][18]
+          As of May 2013, Apple maintains 406 retail stores in fourteen countries[19][20] as well as the online Apple Store and iTunes Store,[21] the latter of which is the world's largest music retailer.[22] Apple is the second-largest publicly traded corporation in the world by market capitalization, with an estimated value of US$414 billion as of January 2013.[23] As of September 29, 2012, the company had 72,800 permanent full-time employees and 3,300 temporary full-time employees worldwide.[4] Its worldwide annual revenue in 2012 totalled $156 billion.[4] In May 2013, Apple entered the top ten of the Fortune 500 list of companies for the first time, rising 11 places above its 2012 ranking to take the sixth position.
+          </p>          
+        </div>        
+
+      </div>
+
+      <div id="progressContent" style="display:none;">
+        <div id="progressInfo">
+          <span id="goal">Goals <input type="button" class="buttonBlue" value="+ Add"></span>
+          <span id="achieved">Achieved</span><br><br>
+          <table id="goalsInfo">
+            <tr class="goalRow first">
+              <td class="goalName">Basic design of program flyer</td>
+              <td class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></td>
+              <td class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></td>
+            </tr>
+            <tr class="goalRow">
+              <td class="goalName">Start fundraising</td>
+              <td class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></td>
+              <td class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></td>
+            </tr>  
+            <tr class="goalRow">
+              <td class="goalName">Send out emails</td>
+              <td class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></td>
+              <td class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></td>
+            </tr>   
+            <tr class="goalRow">
+              <td class="goalName">Record longer pitch</td>
+              <td class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></td>
+              <td class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></td>
+            </tr>                                                                         
+          </table>
+
+          <table id="achievedInfo">
+            <tr class="achievedRow first">
+              <td class="goalName">Record pitch</td>
+              <td class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></td>
+            </tr>
+            <tr class="achievedRow">
+              <td class="goalName">Create rough business plan</td>
+              <td class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></td>              
+            </tr>  
+            <tr class="achievedRow">
+              <td class="goalName">Contact Gates Foundation</td>
+              <td class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></td>              
+            </tr>   
+            <tr class="achievedRow">
+              <td class="goalName">Come up with name and logo</td>
+              <td class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></td>              
+            </tr>                                                             
+          </table>                      
+        </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

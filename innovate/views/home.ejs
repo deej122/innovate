@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>innovate</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <script src="home.js"></script>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        overflow: auto;
+      }
+
+    </style>
+
+
+  </head>
+
+<body style="margin:0;min-width: 1100px;">
+	<header id="header">
+      <a href="/profile" class="brand" style="text-decoration:none">innovate</a>
+  </header>
+
+  <div id="join">
+    <form id="joinForm" class="infoForm" method="POST">
+      <span style="font-size:50px; color: rgba(0,0,0,.7);">Join innovate</span><br><br><br> 
+      <label>Your First Name</label><br>
+      <input name="firstName" type="text" class="input" id="first_name" placeholder="First Name"><br><br>
+      <label>Your Last Name</label><br>
+      <input name="lastName" type="text" class="input" id="last_name" placeholder="Last Name"><br><br>
+      <label>Your Email</label><br>
+      <input name="email" type="text" class="input" id="email" placeholder="Email"><br><br>
+      <label>Your Password</label><br>
+      <input name="pass" type="password" class="input" id="password" placeholder="Password"><br><br>
+      <label>Confirm Your Password</label><br>
+      <input name="confirmPass" type="password" class="input" id="password" placeholder="Confirm Password"><br><br>
+      <input type="submit" id="joinButton" value="Join" class="button"><br><br>   
+    </form>   
+  </div>
+
+  <div id="login">
+      <form id="enterForm" class="infoForm">
+        <span id="enterLabel" style="font-size:50px; color: rgba(0,0,0,.7);">Enter innovate</span><br><br><br>
+        <label id="em">Your Email</label><br>  
+        <input type="text" class="input" id="email" placeholder="Email"><br><br>
+        <label id="pw">Your Password</label><br>
+        <input type="password" class="input" id="password" placeholder="Password"><br><br>
+        <label for = "remember" id = "remember"> Remember Me: </label>
+        <input type = "checkbox" checked = "checked" id="checkbox">
+        <label id="forgot" onclick="forgotPass();">Forgot Password?</label><br><br>
+        <input type="submit" id="enterButton" value="Sign In" class="button"><br><br>
+      </form>      
+      <form id="recover" style="display:none;" class="infoForm">
+        <span id="recoverLabel" style="font-size:50px; color: rgba(0,0,0,.7);">Recover Password</span><br><br><br>
+        <label>Email to Recover Password</label><br>
+        <input type="text" class="input" id="recoverEmail" placeholder="Email to Recover Password"><br><br>
+        <input type="submit" id="recoverButton" value="Recover" class="button"><br><br>
+        <label id="goBack" onclick="forgotPass();">Go back, I remember!</label><br><br>
+      </form>
+  </div>
+
+
+
+</body>
+</html>
