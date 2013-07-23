@@ -4,5 +4,13 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  res.render('home', { title: 'Signup' });
+};
+
+exports.profile = function(req, res){
+	res.render('profile', {title: "Profile"});
+};
+
+exports.new = function(req, res){
+	res.render('new', {title: "Create a Campaign"});
 };

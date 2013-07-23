@@ -5,6 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , posts = require('./routes/posts')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -21,6 +22,9 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/stylesheets'));
+app.use(express.static(__dirname + '/images'));
+app.use(express.static(__dirname + '/scripts'));
 
 // development only
 if ('development' == app.get('env')) {
@@ -28,6 +32,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/profile', routes.profile);
+app.get('/new', routes.new);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
