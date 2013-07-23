@@ -1,0 +1,47 @@
+html{
+    background: #FFFFFF no-repeat center bottom fixed;
+    background-image: url('tem_home_BG3.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#skip{
+	float: right;
+	margin-right: 2%;
+	text-decoration: none;
+	color: #0084B4;
+}
+
+#skip:hover{
+	text-decoration: underline; 
+}
+
+#allSteps{
+	margin: auto;
+	text-align: center;
+}
+
+.step{
+	margin-top: 7%;
+	display: none;
+}
+
+.stepLabel{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.stepText{
+	font-size: 20px;
+}
+
+#proceed{
+	margin: auto;
+	margin-top: 5%;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 5px;
+	display: none;
+}
