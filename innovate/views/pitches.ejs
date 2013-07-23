@@ -3,7 +3,8 @@
   <head>
     <title><%=title%></title>
     <link rel="stylesheet" type="text/css" href="common.css">
-    <link rel="stylesheet" type="text/css" href="pitches.css">    
+    <link rel="stylesheet" type="text/css" href="pitches.css"> 
+    <link rel="stylesheet" type="text/css" href="modals.css">           
     <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,11 +27,105 @@
   
 <body style="margin:0;min-width: 1100px;">
   <header id="header">
-      <a href="/" class="brand" id="in" style="text-decoration:none" tabindex="12">innovate</a>
+      <a href="/" class="brand" id="in" style="text-decoration:none" tabindex="13">innovate</a>
 
       <ul class="header_list">
-        <li><a href="#account" id="acct" tabindex="11">Account</a></li>
+        <li><a href="/home" id="leave" tabindex="12">Sign Out</a></li>
+        <li><a href="#editAccount" data-toggle="modal" id="acct" tabindex="11">Account</a></li>
         <li><a href="/profile" id="prof" tabindex="10">Profile</a></li>  
         <li><a href="/pitches" id="pitch" tabindex="9">Pitches</a></li>
       </ul>
   </header>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Account Modal-->
+<div id="editAccount" class="modal hide fade fade.in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <span data-dismiss="modal" aria-hidden="true" style="float:right; cursor:pointer;">×</span>
+    <h3>Edit Your Account</h3>
+  </div>
+
+  <div class="modal-body">
+  <div id="loginInfo">
+
+  <!--BEGIN FORM-->
+
+    <form id="accountForm">
+      <label>Change Your Email</label><br>
+      <input type="email" name="projectName" class="input" placeholder="New Email"><br><br>
+      <label>Change Your Password</label><br>
+      <input class="input" type="password" placeholder="New Password"><br><br>
+      <label>Confirm New Password</label><br>
+      <input class="input" type="password" placeholder="Re-type New Password"><br><br>
+      <label>Enter Current Password</label><br>
+      <input class="input" type="password" placeholder="Current Password"><br><br>
+      <label>Profile Picture</label><br>
+      <img id="previewProf" src="tempPic.jpg"><br>
+      <input type="button" id="uploadPictureProf" class="buttonBlue" value="Upload New Picture"><br><br><br>
+      <input type="file" id="uploadPicProf" style="display:none;">
+  </div>
+
+  <div id="profileInfo">
+      <label>Change Your First Name</label><br>
+      <input type="text" min="1" max="4" class="input" placeholder="First Name"><br><br>
+      <label>Change Your Last Name</label><br>
+      <input type="text" min="1" max="4" class="input" placeholder="Last Name"><br><br>
+      <label>Change Your High School</label><br>
+      <input type="text" min="1" max="4" class="input" placeholder="High School"><br><br>
+      <label>Change Your Location</label><br>
+      <input type="text" min="1" max="4" class="input" placeholder="Location"><br><br> 
+  </div>  
+  </div>
+
+  <div class="modal-footer">
+    <button class="buttonRed" data-dismiss="modal" aria-hidden="true" style="">Close</button>
+    <input type="submit" class="button" value="Save" style="">
+  </div>
+</form>
+
+    <!--END FORM-->
+</div>
+
+
+
+<!--Picture Preview-->
+<script type="text/javascript">      
+function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+        $('#previewProf').attr('src', e.target.result);
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $("#uploadPicProf").change(function(){
+  readURL(this);
+});
+</script>
+<!--End Picture Preview-->
+<!--Project Pic Upload Dialog-->    
+<script>
+$('#uploadPictureProf').click(function() {
+  $('#uploadPicProf').click();
+});
+</script>
+<!--END Project Pic Upload Dialog-->
+<!--Link to modal JS file-->
+<script src="modals.js"></script>
+<!--end link to modal JS file-->
+</body>
+</html>
