@@ -252,28 +252,28 @@
 
     <form id="accountForm">
       <label>Change Your Email</label><br>
-      <input type="email" name="projectName" class="input" placeholder="New Email"><br><br>
+      <input type="email" class="input" name="emailNew" placeholder="New Email"><br><br>
       <label>Change Your Password</label><br>
-      <input class="input" type="password" placeholder="New Password"><br><br>
+      <input type="password" class="input" name="passNew" placeholder="New Password"><br><br>
       <label>Confirm New Password</label><br>
-      <input class="input" type="password" placeholder="Re-type New Password"><br><br>
-      <label>Enter Current Password</label><br>
-      <input class="input" type="password" placeholder="Current Password"><br><br>
+      <input type="password" class="input" name="passConfirmNew" placeholder="Re-type New Password"><br><br>
       <label>Profile Picture</label><br>
       <img id="previewProf" src="tempPic.jpg"><br>
       <input type="button" id="uploadPictureProf" class="buttonBlue" value="Upload New Picture"><br><br><br>
-      <input type="file" id="uploadPicProf" style="display:none;">
+      <input type="file" id="uploadPicProf" name="profPicNew" style="display:none;">
   </div>
 
   <div id="profileInfo">
       <label>Change Your First Name</label><br>
-      <input type="text" min="1" max="4" class="input" placeholder="First Name"><br><br>
+      <input type="text" class="input" name="firstNameNew" placeholder="First Name"><br><br>
       <label>Change Your Last Name</label><br>
-      <input type="text" min="1" max="4" class="input" placeholder="Last Name"><br><br>
+      <input type="text" class="input" name="lastNameNew" placeholder="Last Name"><br><br>
       <label>Change Your High School</label><br>
-      <input type="text" min="1" max="4" class="input" placeholder="High School"><br><br>
+      <input type="text" class="input" name="highSchoolNew" placeholder="High School"><br><br>
       <label>Change Your Location</label><br>
-      <input type="text" min="1" max="4" class="input" placeholder="Location"><br><br> 
+      <input type="text" class="input" name="locationNew" placeholder="Location"><br><br><br>
+      <label>Enter Current Password to Confirm Changes</label><br>
+      <input type="password" class="input" name="currentPassApprove" placeholder="Current Password"><br><br>
   </div>  
   </div>
 
@@ -285,8 +285,6 @@
 
     <!--END FORM-->
 </div>
-
-
 
 <!--Picture Preview-->
 <script type="text/javascript">      
