@@ -4,7 +4,11 @@
  */
 
 exports.index = function(req, res){
-  res.render('home', { title: 'Signup' });
+  res.render('landing', { title: 'Signup' });
+};
+
+exports.home = function(req, res){
+	res.render('home', {title: 'Home'})
 };
 
 exports.profile = function(req, res){
