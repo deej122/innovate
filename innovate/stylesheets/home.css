@@ -22,18 +22,14 @@ html{
 
 #join{
     float: left;
-    padding-top:12%;
-    padding-bottom: 4%;
+    padding-top:10%;
+    padding-bottom: 12%;
     width: 49%;
     text-align: center;
     padding-right: 10px;
     border-right: 1px groove rgba(0,0,0,.3);
 }
 
-#joinForm label{
-    float: left;
-    margin-left: 23%;
-}
 #joinButton{
     margin-left: 50px;
 }
@@ -82,11 +78,6 @@ html{
 #forgot:hover{
     cursor: pointer;
     text-decoration: underline;
-}
-
-#recover label{
-    float: left;
-    margin-left: 23%;
 }
 
 #recoverButton{
