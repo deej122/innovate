@@ -11,6 +11,10 @@ exports.home = function(req, res){
 	res.render('home', {title: 'Home'});
 };
 
+exports.createProfile = function(req, res){
+	res.render('createProfile', {title: "Create Profile"});
+};
+
 exports.profile = function(req, res){
 	res.render('profile', {title: "Profile"});
 };

@@ -8,7 +8,7 @@ html{
     -o-background-size: cover;
     background-size: cover;*/
     color: rgba(0, 0, 0, .8);
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 'Arimo', sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 'Roboto', sans-serif;
 }
 
 /*header style*/

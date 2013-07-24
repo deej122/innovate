@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="createProfile.css">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="modals.css">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="home.js"></script>
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        overflow: auto;
+      }
+
+    </style>
+
+
+  </head>
+
+<body style="margin:0;min-width: 1100px;">
+	<header id="header">
+      <a href="/new" class="brand" style="text-decoration:none" tabindex="5">innovate</a>
+  </header>
+
+<div class="heading">
+    <span class="pageLabel">Three Things Before You Get innovating</span>
+  </div>
+
+  <div id="createInfo">
+
+  <!--BEGIN FORM-->
+
+    <form id="createForm">
+      <label>What's the Name of Your High School?</label><br>
+      <input type="text" name="yourName" class="input" placeholder="Full Name of High School" tabindex="1"><br><br><br> 
+      <label>Where's Your High School Located?</label><br>
+      <input type="text" class="input" name="hsName" placeholder="City, State (i.e. Ann Arbor, Michigan)" tabindex="2"><br><br><br>
+      <label>Choose a Profile Picture</label><br>
+      <img id="previewProfOne" src="logo.png"><br>
+      <input type="button" id="uploadPictureProfOne" class="buttonBlue" value="Upload a Picture" tabindex="3"><br><br><br>
+      <input type="file" id="uploadPicProfOne" style="display:none;">
+      <input type="submit" id="createSubmit" class="button" value="I'm Ready to innovate" tabindex="4"> 
+    </form>             
+  </div>
+
+    <!--END FORM-->
+
+  </div>  
+
+
+
+
+<!--Picture Preview-->
+<script type="text/javascript">      
+function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+        $('#previewProfOne').attr('src', e.target.result);
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $("#uploadPicProfOne").change(function(){
+  readURL(this);
+});
+</script>
+<!--End Picture Preview-->
+<!--Project Pic Upload Dialog-->    
+<script>
+$('#uploadPictureProfOne').click(function() {
+  $('#uploadPicProfOne').click();
+});
+</script>
+<!--END Project Pic Upload Dialog-->
+
+  </body>
+  </html>
