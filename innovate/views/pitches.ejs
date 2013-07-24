@@ -38,9 +38,165 @@
   </header>
 
 
+  <div class="heading">
+    <span class="pageLabel">Browse Pitches</span>
+  </div>
+
+  <div id="allPitches">
+
+    <table id="pitchTable">
+      <tr class="pitchRow">
+        <td class="thePitch">
+          <div class="necInfo">
+            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
+            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
+          </div>
+          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe><br>
+          <input type="submit" class="buttonBlue request" value="Request to Join">
+        </td>
+        <td class="thePitch">
+          <div class="necInfo">
+            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
+            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
+          </div>
+          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
+          <input type="submit" class="buttonBlue request" value="Request to Join">
+        </td>  
+        <td class="thePitch">
+          <div class="necInfo">
+            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
+            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
+          </div>
+          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
+          <input type="submit" class="buttonBlue request" value="Request to Join">
+        </td>                                
+      </tr>
+
+      <tr class="pitchRow">
+        <td class="thePitch">
+          <div class="necInfo">
+            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
+            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
+          </div>
+          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe><br>
+          <input type="submit" class="buttonBlue request" value="Request to Join">
+        </td>
+        <td class="thePitch">
+          <div class="necInfo">
+            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
+            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
+          </div>
+          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
+          <input type="submit" class="buttonBlue request" value="Request to Join">
+        </td>  
+        <td class="thePitch">
+          <div class="necInfo">
+            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
+            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
+          </div>
+          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
+          <input type="submit" class="buttonBlue request" value="Request to Join">
+        </td>                                
+      </tr>
+
+      <tr class="pitchRow">
+        <td class="thePitch">
+          <div class="necInfo">
+            <a href="#projectInfo"data-toggle="modal"  class="projectName">Apple Computers</a><br>
+            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
+          </div>
+          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe><br>
+          <input type="submit" class="buttonBlue request" value="Request to Join">
+        </td>
+        <td class="thePitch">
+          <div class="necInfo">
+            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
+            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
+          </div>
+          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
+          <input type="submit" class="buttonBlue request" value="Request to Join">
+        </td>  
+        <td class="thePitch">
+          <div class="necInfo">
+            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
+            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
+          </div>
+          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
+          <input type="submit" class="buttonBlue request" value="Request to Join">
+        </td>                                
+      </tr>
+
+
+    <script>
+      $("td:last-child").css({border:"none"})
+    </script>
+    </table>
+
+    <br><br>
+    <div id="commonTags">
+      <label id="commonLabel">Filter Common Tags</label>
+      <ul id="commonList">
+        <li class="tag">#nonprofit</li>
+        <li class="tag">#forprofit</li>
+        <li class="tag">#coding</li>
+        <li class="tag">#organization</li>
+        <li class="tag">#initiative</li>
+      </ul>
+    </div>
+  </div>
 
 
 
+
+
+
+
+
+<!--projectInfo Modal-->
+<div id="projectInfo" class="modal hide fade fade.in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <span data-dismiss="modal" aria-hidden="true" style="float:right; cursor:pointer;">×</span>
+    <h3>Apple Computers</h3>
+  </div>
+
+  <div class="modal-body">
+        <div id="infoBig">
+          <img class="logo" id="logoBig" src="tempLogo.png">
+          <div id="stuffBig">
+            <span id="nameBig">Apple Computers</span><br>
+            <ul id="teamBig">
+             <li>DJ Jagannathan</li>
+             <li>Steve Jobs</li>
+             <li>Steve Wozniak</li>
+            </ul>
+            <span>Tags</span>
+            <ul id="tagsBig">
+              <li>#computers</li>
+              <li>#programming</li>
+              <li>#forprofit</li>
+              <li>#apple</li>
+            </ul>
+          </div>
+          <div id="pitchBig">
+            <iframe width="300" height="150" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe><br>
+            <input id="request" type="submit" class="buttonBlue" value="Request to Join">
+          </div>
+        </div>
+        <div id="descriptionBig">
+          <p>
+          Apple Inc., formerly Apple Computer, Inc., is an American multinational corporation headquartered in Cupertino, California[2] that designs, develops, and sells consumer electronics, computer software and personal computers. Its best-known hardware products are the Mac line of computers, the iPod music player, the iPhone smartphone, and the iPad tablet computer. Its consumer software includes the OS X and iOS operating systems, the iTunes media browser, the Safari web browser, and the iLife and iWork creativity and production suites.
+          The company was founded on April 1, 1976, and incorporated as Apple Computer, Inc. on January 3, 1977.[6] The word "Computer" was removed from its name on January 9, 2007, reflecting its shifted focus towards consumer electronics after the introduction of the iPhone.[7][8][9]
+          Apple is the world's second-largest information technology company by revenue after Samsung Electronics, and the world's third-largest mobile phone maker after Samsung and Nokia.[10] Fortune magazine named Apple the most admired company in the United States in 2008, and in the world from 2008 to 2012.[11][12][13][14][15] However, the company has received criticism for its contractors' labor practices, and for Apple's own environmental and business practices.[16][17][18]
+          As of May 2013, Apple maintains 406 retail stores in fourteen countries[19][20] as well as the online Apple Store and iTunes Store,[21] the latter of which is the world's largest music retailer.[22] Apple is the second-largest publicly traded corporation in the world by market capitalization, with an estimated value of US$414 billion as of January 2013.[23] As of September 29, 2012, the company had 72,800 permanent full-time employees and 3,300 temporary full-time employees worldwide.[4] Its worldwide annual revenue in 2012 totalled $156 billion.[4] In May 2013, Apple entered the top ten of the Fortune 500 list of companies for the first time, rising 11 places above its 2012 ranking to take the sixth position.
+          </p>          
+        </div>        
+
+  </div>
+
+  <div class="modal-footer">
+    <button class="buttonRed" data-dismiss="modal" aria-hidden="true" style="">Close</button>
+  </div>
+</div>
 
 
 

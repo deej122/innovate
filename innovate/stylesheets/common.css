@@ -1,7 +1,7 @@
 html{
     min-width: 100%;
     min-height: 100%;
-/*    background: #FFFFFF no-repeat center center fixed;
+/*  background: #FFFFFF no-repeat center center fixed;
     background-image: url('tem_home_BG.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -15,7 +15,7 @@ html{
 #header {
     background-color: #FFFFFF;
     width:100%;
-    min-width: 800px;
+    min-width: 400px;
     height: 45px;
     position: fixed;
     top: 0;
@@ -95,6 +95,19 @@ html{
 }
 
 /*end header style*/
+
+/*static styling*/
+
+.heading{
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 30px;
+    color: rgba(0,0,0,.8);
+    width: 90%;
+    border-bottom: 1px groove rgba(0,0,0,.3);
+}
+
+/*end static styling*/
 
 .input{
     display: inline-block;
