@@ -31,7 +31,7 @@ var getUser = function(email, password, callback){
 				}
 			});
 		} else{
-			callback(0);
+			callback(2);
 		}
 	});
 }

@@ -40,6 +40,32 @@ $(document).ready(function(){
         }
         $('#errors').modal('show');
     }
+  });
+  $('#enterForm').submit(function(e){
+    return false;
+  });
+  $('#enterButton').click(function(e){
+    var email = $('#loginEmail').val();
+    var pass = $('#loginPW').val();
+    $.ajax({
+        url     :   '/login',
+        type    :   'POST',
+        cache   :    false,
+        data    :    {email: email, password: pass},
+        success :    function(data){
+            if(data.msg == 'nok'){
+                $('#errorContent').empty();
+                $('#errorContent').append("<p> Username and Password do not match </p>");
+                $('#errors').modal('show');
+            } else if(data.msg == 'notfound') {
+                $('#errorContent').empty();
+                $('#errorContent').append("<p> Username not found! Create an account. </p>");
+                $('#errors').modal('show');
+            } else{
+                window.location = res.redirect;
+            }
+        }
+    })
   })
 })
 
