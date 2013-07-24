@@ -9,7 +9,7 @@ exports.addUser = function(req, res){
 	db.addUser(userObj, function(save){
 		if(save){
 			req.session.user = userObj;
-			res.send({msg: 'ok'});
+			res.send({msg: 'ok', redirect: '/'});
 		} else {
 			res.send({msg: 'nok'});
 		}

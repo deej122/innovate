@@ -5,9 +5,12 @@
     <link rel="stylesheet" type="text/css" href="home.css">
     <link rel="stylesheet" type="text/css" href="common.css">
     <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-    <script src="home.js"></script>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="modals.css">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="home.js"></script>
 
     <style type="text/css">
       body {
@@ -29,11 +32,11 @@
   <div id="join">
     <form action = "/signup" id="joinForm" class="infoForm" method="POST">
       <span style="font-size:50px; color: rgba(0,0,0,.7);">Join innovate</span><br><br><br> 
-      <input name="firstName" type="text" class="input" id="first_name" placeholder="First Name"><br><br>
-      <input name="lastName" type="text" class="input" id="last_name" placeholder="Last Name"><br><br>
-      <input name="email" type="text" class="input" id="email" placeholder="Email"><br><br>
-      <input name="pass" type="password" class="input" id="password" placeholder="Password"><br><br>
-      <input name="confirmPass" type="password" class="input" id="password" placeholder="Confirm Password"><br><br>
+      <input name="firstName" type="text" class="input" id="first_name" required placeholder="First Name"><br><br>
+      <input name="lastName" type="text" class="input" id="last_name" required placeholder="Last Name"><br><br>
+      <input name="email" type="text" class="input" id="email" required placeholder="Email"><br><br>
+      <input name="pass" type="password" class="input" id="password" required placeholder="Password"><br><br>
+      <input name="confirmPass" type="password" class="input" id="confirmPassword" required placeholder="Confirm Password"><br><br>
       <input type="submit" id="joinButton" value="Join" class="button"><br><br>   
     </form>   
   </div>
@@ -59,7 +62,18 @@
       </form>
   </div>
 
-
-
+  <div id = "errors" class = "modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <span data-dismiss="modal" aria-hidden="true" style = "float:right; cursor:pointer;">x</span>
+      <h3> Errors! </h3> 
+      <div id = "errorContent">
+        <!-- CONTENT GOES HERE -->
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="buttonRed" data-dismiss="modal" aria-hidden="true" style="">Close</button>
+    </div>
+  </div>
+  <script src="modals.js"></script>
 </body>
 </html>
