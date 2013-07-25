@@ -15,8 +15,8 @@ $(document).ready(function(){
         lastName    : lastName,
         email       : email,
         pass        : pass
-      }
-      $.ajax({
+    }
+    $.ajax({
         url     :    '/signup',
         type    :    'POST',
         cache   :    false,
@@ -55,14 +55,14 @@ $(document).ready(function(){
         success :    function(data){
             if(data.msg == 'nok'){
                 $('#errorContent').empty();
-                $('#errorContent').append("<p> Username and Password do not match </p>");
+                $('#errorContent').append("<p> Username and Password do not match! </p>");
                 $('#errors').modal('show');
             } else if(data.msg == 'notfound') {
                 $('#errorContent').empty();
-                $('#errorContent').append("<p> Username not found! Create an account. </p>");
+                $('#errorContent').append("<p> Username not found! Create an account to start innovating. </p>");
                 $('#errors').modal('show');
             } else{
-                window.location = res.redirect;
+                window.location = data.redirect;
             }
         }
     })
