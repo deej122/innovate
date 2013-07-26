@@ -37,11 +37,11 @@
 
   <!--BEGIN FORM-->
 
-    <form id="createForm">
+    <form id="createForm" method = "POST" action = "/addProfile" enctype = "multipart/form-data">
       <label>What's the Name of Your High School?</label><br>
-      <input type="text" name="yourName" class="input" placeholder="Full Name of High School" tabindex="1"><br><br><br> 
+      <input type="text" id = "highschool" name="hsName" class="input" placeholder="Full Name of High School" tabindex="1"><br><br><br> 
       <label>Where's Your High School Located?</label><br>
-      <input type="text" class="input" name="hsName" placeholder="City, State (i.e. Ann Arbor, Michigan)" tabindex="2"><br><br><br>
+      <input type="text" id = "location" class="input" name="location" placeholder="City, State (i.e. Ann Arbor, Michigan)" tabindex="2"><br><br><br>
       <label>Choose a Profile Picture</label><br>
       <img id="previewProfOne" src="logo.png"><br>
       <input type="button" id="uploadPictureProfOne" class="buttonBlue" value="Upload a Picture" tabindex="3"><br><br><br>
