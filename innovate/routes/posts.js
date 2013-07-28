@@ -1,4 +1,5 @@
 var db = require('../scripts/db');
+var s3 = require('../scripts/s3');
 
 exports.addUser = function(req, res){
 	var userObj = {
@@ -33,14 +34,20 @@ exports.getUser = function(req, res){
 
 exports.addProfile = function(req, res){
 	var postData = {
-		email    :  req.session.user._id,
+		_id    :  req.session.user._id,
 		school	 : 	req.body.hsName,
 		location : 	req.body.location
 	}
 	db.addProfile(postData, function(good){
 		if(good){
+			s3.picture(req, function(aok){
+				if(aok){
+					res.redirect('/profile');
+				} else {
+					res.send('There was an error. Try again.');
+				}
+			})
 			//added to db, now upload the picture
-			res.redirect('/profile');
 		} else{
 			res.send('There was an error.');
 		}
