@@ -121,8 +121,8 @@
 	border-radius: 5px;
 	border: 7px solid rgba(240,240,240,.9);
 	float: left;
-	max-height: 170px;
-	max-width: 170px;
+	max-height: 160px;
+	max-width: 160px;
 	margin-bottom: 10px;
     -moz-box-shadow:    1px 5px 10px 3px rgba(0,0,0,.2);
     -webkit-box-shadow: 3px 3px 10px 3px rgba(0,0,0,.2);
