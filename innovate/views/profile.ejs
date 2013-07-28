@@ -37,7 +37,7 @@
 
 <!--Name etc. and Tabs-->
   <div id="top">
-    <span id="name">DJ Jagannathan</span>
+    <span id="name"><%=name%></span>
     <a href="/new" id="newProject" tabindex="4">Start new project</a>
   </div>  
     <br><br>
@@ -113,10 +113,10 @@
 <!--Portfolio-->    
       <div id="portfolioContent">
         <div id="basicInfo">
-          <img class="profile_pic" id="portfolioPic" src="tempPic.jpg">
+          <img class="profile_pic" id="portfolioPic" src="<%=img%>">
           <div id="schoolStuff">
-            <span id="schoolName">John Jay High School</span><br>
-            <span id="schoolLocation">Hopewell Junction, New York</span>
+            <span id="schoolName"><%=school%></span><br>
+            <span id="schoolLocation"><%=location%></span>
           </div>
         </div>
         <div id="previousProjects">
@@ -258,7 +258,7 @@
       <label>Confirm New Password</label><br>
       <input type="password" class="input" name="passConfirmNew" placeholder="Re-type New Password"><br><br>
       <label>Profile Picture</label><br>
-      <img id="previewProf" src="tempPic.jpg"><br>
+      <img id="previewProf" src="<%=img%>"><br>
       <input type="button" id="uploadPictureProf" class="buttonBlue" value="Upload New Picture"><br><br><br>
       <input type="file" id="uploadPicProf" name="profPicNew" style="display:none;">
   </div>

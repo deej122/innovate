@@ -40,7 +40,7 @@ var getProfile = function(userObject, callback){
 	db.profiles.findOne({_id: userObject._id}, function(e, profile){
 		if(e) console.log(e);
 		if(profile){
-			callback(1);
+			callback(1, profile);
 		} else {
 			callback(0);
 		}

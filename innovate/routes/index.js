@@ -4,6 +4,7 @@
  */
  
 var db = require('../scripts/db.js');
+var s3 = require('../scripts/s3.js');
 
 exports.index = function(req, res){
   res.render('landing', { title: 'innovate' });
@@ -31,9 +32,17 @@ exports.profile = function(req, res){
 	if(req.session.user == null){
 		res.redirect('/home');
 	} else{
-		db.getProfile(req.session.user, function(good){
+		db.getProfile(req.session.user, function(good, profile){
 			if(good){
-				res.render('profile', {title: "Profile"});
+				var url = s3.getPic(req.session.user._id);
+				var data = {
+					title: 'Profile',
+					name : req.session.user.name,
+					school : profile.school,
+					location : profile.location,
+					img : url
+				}
+				res.render('profile', data);
 			} else{
 				res.redirect('/create');
 			}

@@ -28,3 +28,7 @@ exports.picture = function(req, callback){
 		}
 	)
 }
+
+exports.getPic = function(email){
+	return s3Account.readPolicy(email, info.bucket, 60);
+}
