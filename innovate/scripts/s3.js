@@ -29,7 +29,9 @@ exports.picture = function(req, callback){
 			objectName: req.session.user._id,
 			stream: stream
 		}, function(e, o){
-			if(e) callback(0);
+			if(e) {
+				callback(0);
+			}
 			else callback(1);
 		}
 	)

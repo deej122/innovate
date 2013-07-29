@@ -49,7 +49,9 @@ var getProfile = function(userObject, callback){
 
 var addProfile = function(postData, callback){
 	db.profiles.save(postData, function(e, good){
-		if(e) callback(0);
+		if(e) {
+			console.log(e); console.log(e.stack); callback(0);
+		}
 		else callback(1);
 	});
 }

@@ -1,22 +1,27 @@
-/*$(document).ready(function(){
+$(document).ready(function(){
 	$('#createForm').submit(function(e){
 		return false;
 	});
 	$('#createSubmit').click(function(){
 		var highschool = $('#highschool').val();
 		var location = $('#location').val();
-		var form = $('createForm')[2];
-		var fd = new FormData(form);
-		var xhr = new XMLHttpRequest();
-		xhr.open(form.method, form.action, true);
-		xhr.onreadystatechange = function(){
-			if(xhr.readyState == 4 && xhr.status == 200){
-				//handle success
-				alert(msg);
+		alert(highschool);
+		alert(location);
+		var errors = [];
+		if(highschool == ""){
+			errors.push("You cannot leave your high school empty!");
+		} 
+		if(location == ""){
+			errors.push("You cannot leave your location empty!");
+		}
+		if(errors.length == 0){
+			$('#createForm').submit();
+		} else {
+			$('#errorContent').empty();
+			for(var i = 0; i < errors.length; ++i){
+				$('#errorContent').append("<p>"+errors[i]+"</p>");
 			}
-		};
-		var data = {hsName: highschool, location: location, fd: fd};
-		xhr.send(data);
-		return false;
-	})
-});*/
+			$('#errors').modal('show');
+		}
+	});
+});

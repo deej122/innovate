@@ -11,6 +11,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js" type="text/javascript"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="home.js"></script>
+    <script src = "create.js"></script>
+
 
     <style type="text/css">
       body {
@@ -51,8 +53,20 @@
   </div>
 
     <!--END FORM-->
+  <div id = "errors" class = "modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <span data-dismiss="modal" aria-hidden="true" style = "float:right; cursor:pointer;">x</span>
+      <h3> Errors! </h3> 
+      <div id = "errorContent">
+        <!-- CONTENT GOES HERE -->
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="buttonRed" data-dismiss="modal" aria-hidden="true" style="">Close</button>
+    </div>
+  </div>
 
-  </div>  
+   <script src="modals.js"></script>  
 
 
 

@@ -35,7 +35,7 @@ exports.getUser = function(req, res){
 
 exports.addProfile = function(req, res){
 	var postData = {
-		_id    :  req.session.user._id,
+		_id    	 :  req.session.user._id,
 		school	 : 	req.body.hsName,
 		location : 	req.body.location
 	}
