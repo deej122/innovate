@@ -64,7 +64,7 @@ var addProject = function(postData, callback){
 };
 
 var getProject = function(id, callback){
-	db.projects.findOne({_id: id}, function(e, o){
+	db.projects.findOne({ members : id}, function(e, o){
 		if(e) callback(0);
 		if(o){
 			callback(1, o);

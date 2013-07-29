@@ -156,14 +156,18 @@
         <div id="projectInfo">
           <img class="profile_pic" id="logo" src="tempLogo.png">
           <div id="projectStuff">
-            <span id="projectName">Apple Computers</span><br>
+            <span id="projectName"><%=projectName%></span><br>
             <ul id="teamMembers">
+            <% members.forEach(function(member){ %>
+              <li> <%= member %> </li>
+            <% }); %>
              <li>DJ Jagannathan</li>
              <li>Steve Jobs</li>
              <li>Steve Wozniak</li>
             </ul>
             <span>Tags</span>
             <ul id="tagList">
+              <li> <%=tags %> </li>
               <li>#computers</li>
               <li>#programming</li>
               <li>#forprofit</li>
@@ -177,10 +181,7 @@
         </div>
         <div id="projectDescription">
           <p>
-          Apple Inc., formerly Apple Computer, Inc., is an American multinational corporation headquartered in Cupertino, California[2] that designs, develops, and sells consumer electronics, computer software and personal computers. Its best-known hardware products are the Mac line of computers, the iPod music player, the iPhone smartphone, and the iPad tablet computer. Its consumer software includes the OS X and iOS operating systems, the iTunes media browser, the Safari web browser, and the iLife and iWork creativity and production suites.
-          The company was founded on April 1, 1976, and incorporated as Apple Computer, Inc. on January 3, 1977.[6] The word "Computer" was removed from its name on January 9, 2007, reflecting its shifted focus towards consumer electronics after the introduction of the iPhone.[7][8][9]
-          Apple is the world's second-largest information technology company by revenue after Samsung Electronics, and the world's third-largest mobile phone maker after Samsung and Nokia.[10] Fortune magazine named Apple the most admired company in the United States in 2008, and in the world from 2008 to 2012.[11][12][13][14][15] However, the company has received criticism for its contractors' labor practices, and for Apple's own environmental and business practices.[16][17][18]
-          As of May 2013, Apple maintains 406 retail stores in fourteen countries[19][20] as well as the online Apple Store and iTunes Store,[21] the latter of which is the world's largest music retailer.[22] Apple is the second-largest publicly traded corporation in the world by market capitalization, with an estimated value of US$414 billion as of January 2013.[23] As of September 29, 2012, the company had 72,800 permanent full-time employees and 3,300 temporary full-time employees worldwide.[4] Its worldwide annual revenue in 2012 totalled $156 billion.[4] In May 2013, Apple entered the top ten of the Fortune 500 list of companies for the first time, rising 11 places above its 2012 ranking to take the sixth position.
+          <%=description%>
           </p>          
         </div>        
 

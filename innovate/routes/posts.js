@@ -56,8 +56,8 @@ exports.addProfile = function(req, res){
 }
 
 exports.addProject = function(req, res){
+	var id = new ObjectID();
 	var postData = {
-		//var id = new ObjectID();
 		_id 	    : 	id.valueOf().toString(),
 		creator     :   req.session.user._id,
 		name        :   req.body.projectName,
@@ -66,7 +66,8 @@ exports.addProject = function(req, res){
 		missing     :   req.body.projectTeam,
 		skills      :   req.body.projectSkills,
 		description :   req.body.projectDescription,
-		members     :   []
+		members     :   [req.session.user._id],
+		status      :   "Active"
 	}
 	db.addProject(postData, function(good, project){
 		if(good){
@@ -74,7 +75,7 @@ exports.addProject = function(req, res){
 				if(great){
 					res.redirect('/profile');
 				} else {
-					res.send('There was ane error');
+					res.send('There was an error');
 				}
 			})
 		} else {

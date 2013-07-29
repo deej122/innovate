@@ -34,16 +34,43 @@ exports.profile = function(req, res){
 	} else{
 		db.getProfile(req.session.user, function(good, profile){
 			if(good){
-				var url = s3.getPic(req.session.user._id);
-				var data = {
-					title: 'Profile',
-					name : req.session.user.name,
-					school : profile.school,
-					location : profile.location,
-					img : url
-				}	
-				//db.getProject()
-				res.render('profile', data);
+				db.getProject(req.session.user._id, function(cool, project){
+					if(cool){
+						var proPic = s3.getPic(req.session.user._id);
+						var url = s3.getProj(project._id);
+						var data = {
+							title: 'Profile',
+							name : req.session.user.name,
+							school : profile.school,
+							location : profile.location,
+							img : proPic,
+							projectName: project.name,
+							members: project.members,
+							tags: project.tags,
+							link: project.link,
+							description: project.description,
+							projImg: url,
+						}
+						res.render('profile', data);
+					} else {
+						var proPic = s3.getPic(req.session.user._id);
+						var url = "" //some default ID
+						var data = {
+							title: 'Profile',
+							name : req.session.user.name,
+							school : profile.school,
+							location : profile.location,
+							img : proPic,
+							projectName: "Looks like you're not working on any projects.",
+							members: [],
+							tags: "",
+							link: "",//some default video about project cinta,
+							description: "Click the links above to either create a project or join one! It's what the cool kids are doing.",
+							projImg: url,
+						}
+						res.render('profile', data);
+					}
+				})
 			} else{
 				res.redirect('/create');
 			}

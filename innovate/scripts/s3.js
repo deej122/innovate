@@ -52,6 +52,7 @@ exports.project = function(req, id, callback){
 			client: projectClient,
 			objectName: id,
 			stream: stream
+			
 		}, function(e, o){
 			if(e) callback(0);
 			else callback(1);
