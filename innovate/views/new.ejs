@@ -6,10 +6,12 @@
     <link rel="stylesheet" type="text/css" href="new.css"> 
     <link rel="stylesheet" type="text/css" href="modals.css">      
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="modals.css">   
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js" type="text/javascript"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="new.js"></script>
 
     <style type="text/css">
       body {
@@ -45,7 +47,7 @@
 
     <form id="basicForm" method = "POST">
       <label>Give Your Project a Name</label><br>
-      <input type="text" id = "projectName" name="projectName" class="input" placeholder="Name of project" tabindex="1" required><br><br><br>
+      <input type="text" id = "projectName" name="projectName" class="input" placeholder="Name of project" tabindex="1"><br><br><br>
       <label>Tags</label><br>
       <textarea rows="5" cols="50" id = "projectTags" name="projectTags" placeholder="List tags here (i.e. #nonprofit #computers #fun ...)" tabindex="2"></textarea><br><br><br>
       <label>Project Picture</label><br>
@@ -53,23 +55,38 @@
       <input type="button" id="uploadPicture" class="buttonBlue" value="Upload a Picture" tabindex="3"><br><br><br>
       <input type="file" name = "picture" id="uploadPic" style="display:none;">
       <label>Attach a Link to Your Pitch on YouTube</label><br>
-      <input type="url" id="pitchLink" class="input" name="projectPitchLink" placeholder="Link to pitch on YouTube" tabindex="4" required><br>
+      <input type="url" id="pitchLink" class="input" name="projectPitchLink" placeholder="Link to pitch on YouTube" tabindex="4"><br>
       <span id="makeSure">Make sure your video isn't listed as "Private" or else no one will be able to watch it!</span>  
   </div>
 
   <div id="otherInfo">
       <label>How Many Teammates are you looking for?</label><br>
-      <input type="number" min="1" max="4" class="input" placeholder="Number of teammates (max of 4)" name="projectTeam" tabindex="5" required><br><br><br>
+      <input id = "teammates" type="number" min="1" max="4" class="input" placeholder="Number of teammates (max of 4)" name="projectTeam" tabindex="5"><br><br><br>
       <label>What Skills are You Missing?</label><br>
       <textarea rows="5" cols="50" placeholder="List skills here (i.e. coding, public speaking, anything, ...)" name="projectSkills" tabindex="6"></textarea><br><br><br>
       <label>Give us a Rough Description of Your Project and Goals</label><br>
-      <textarea rows="20" cols="80" placeholder="Description of Project" name="projectDescription" tabindex="7" required></textarea><br><br><br>  
+      <textarea rows="20" cols="80" id = "description" placeholder="Description of Project" name="projectDescription" tabindex="7"></textarea><br><br><br>  
       <input type="submit" id="formSubmit" class="button" value="Start Project" tabindex="8">  
     </form>
 
     <!--END FORM-->
 
   </div>  
+
+  <div id = "errors" class = "modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <span data-dismiss="modal" aria-hidden="true" style = "float:right; cursor:pointer;">x</span>
+      <h3> Errors! </h3> 
+      <div id = "errorContent">
+        <!-- CONTENT GOES HERE -->
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="buttonRed" data-dismiss="modal" aria-hidden="true" style="">Close</button>
+    </div>
+  </div>
+
+   <script src="modals.js"></script>  
 
 
 
