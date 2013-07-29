@@ -41,7 +41,8 @@ exports.profile = function(req, res){
 					school : profile.school,
 					location : profile.location,
 					img : url
-				}
+				}	
+				//db.getProject()
 				res.render('profile', data);
 			} else{
 				res.redirect('/create');
@@ -57,3 +58,8 @@ exports.new = function(req, res){
 exports.pitches = function(req, res){
 	res.render('pitches', {title: "Create a Campaign"});
 };
+
+exports.logout = function(req, res){
+	req.session.destroy();
+	res.redirect('/home');
+}

@@ -1,4 +1,4 @@
-var db = require('mongojs').connect('innovate', ["users", "profiles"]);
+var db = require('mongojs').connect('innovate', ["users", "profiles", "projects"]);
 var bcrypt = require('bcrypt-nodejs');
 var env = process.env.NODE_ENV || 'development';
 
@@ -54,9 +54,29 @@ var addProfile = function(postData, callback){
 	});
 }
 
+var addProject = function(postData, callback){
+	db.projects.save(postData, function(e, good){
+		if(e) callback(0);
+		else callback(1, good);
+	})
+};
+
+var getProject = function(id, callback){
+	db.projects.findOne({_id: id}, function(e, o){
+		if(e) callback(0);
+		if(o){
+			callback(1, o);
+		} else {
+			callback(0);
+		}
+	})
+}
+
 
 
 exports.addUser = addUser;
 exports.getUser = getUser;
 exports.getProfile = getProfile;
 exports.addProfile = addProfile;
+exports.addProject = addProject;
+exports.getProject = getProject;

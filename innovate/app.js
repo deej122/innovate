@@ -40,6 +40,7 @@ app.get('/profile', routes.profile);
 app.get('/new', routes.new);
 app.get('/pitches', routes.pitches);
 app.get('/users', user.list);
+app.get('/logout', routes.logout);
 
 app.post('/signup', posts.addUser);
 app.post('/login', posts.getUser);

@@ -1,5 +1,6 @@
 var db = require('../scripts/db');
 var s3 = require('../scripts/s3');
+var ObjectID = require("mongodb").ObjectID;
 
 exports.addUser = function(req, res){
 	var userObj = {
@@ -49,6 +50,34 @@ exports.addProfile = function(req, res){
 			})
 			//added to db, now upload the picture
 		} else{
+			res.send('There was an error.');
+		}
+	})
+}
+
+exports.addProject = function(req, res){
+	var postData = {
+		//var id = new ObjectID();
+		_id 	    : 	id.valueOf().toString(),
+		creator     :   req.session.user._id,
+		name        :   req.body.projectName,
+		tags        :   req.body.projectTags,
+		youtube     :   req.body.projectPitchLink,
+		missing     :   req.body.projectTeam,
+		skills      :   req.body.projectSkills,
+		description :   req.body.projectDescription,
+		members     :   []
+	}
+	db.addProject(postData, function(good, project){
+		if(good){
+			s3.project(req, project._id, function(great){
+				if(great){
+					res.redirect('/profile');
+				} else {
+					res.send('There was ane error');
+				}
+			})
+		} else {
 			res.send('There was an error.');
 		}
 	})
