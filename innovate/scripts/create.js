@@ -1,12 +1,10 @@
 $(document).ready(function(){
 	$('#createForm').submit(function(e){
-		return false;
+		e.preventDefault();
 	});
 	$('#createSubmit').click(function(){
 		var highschool = $('#highschool').val();
 		var location = $('#location').val();
-		alert(highschool);
-		alert(location);
 		var errors = [];
 		if(highschool == ""){
 			errors.push("You cannot leave your high school empty!");
@@ -15,6 +13,7 @@ $(document).ready(function(){
 			errors.push("You cannot leave your location empty!");
 		}
 		if(errors.length == 0){
+			$('#createForm').unbind("submit");
 			$('#createForm').submit();
 		} else {
 			$('#errorContent').empty();
