@@ -16,7 +16,6 @@ var projectClient = knox.createClient({
 	secret  :   info.secret,
 	bucket  :   info.project
 })
-
 exports.picture = function(req, callback){
 	if(req.files.picture.size == 0){
 		var stream = fs.createReadStream('randopic');
@@ -42,6 +41,7 @@ exports.getPic = function(email){
 }
 
 exports.project = function(req, id, callback){
+	console.log(req.files);
 	if(req.files.picture.size == 0){
 		var stream = fs.createReadStream('randopic');
 	} else {
@@ -52,7 +52,7 @@ exports.project = function(req, id, callback){
 			client: projectClient,
 			objectName: id,
 			stream: stream
-			
+
 		}, function(e, o){
 			if(e) callback(0);
 			else callback(1);
