@@ -45,7 +45,7 @@
 
   <!--BEGIN FORM-->
 
-    <form id="basicForm" method = "POST">
+    <form id="basicForm" method = "POST" enctype="multipart/form-data">
       <label>Give Your Project a Name</label><br>
       <input type="text" id = "projectName" name="projectName" class="input" placeholder="Name of project" tabindex="1"><br><br><br>
       <label>Tags</label><br>
@@ -68,10 +68,9 @@
       <textarea rows="20" cols="80" id = "description" placeholder="Description of Project" name="projectDescription" tabindex="7"></textarea><br><br><br>  
       <input type="submit" id="formSubmit" class="button" value="Start Project" tabindex="8">  
     </form>
+  </div>
 
-    <!--END FORM-->
-
-  </div>  
+    <!--END FORM-->  
 
   <div id = "errors" class = "modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">

@@ -154,28 +154,21 @@
 <!--Project-->
       <div id="projectContent" style="display:none;">
         <div id="projectInfo">
-          <img class="profile_pic" id="logo" src="tempLogo.png">
+          <img class="profile_pic" id="logo" src="<%=projImg%>">
           <div id="projectStuff">
             <span id="projectName"><%=projectName%></span><br>
             <ul id="teamMembers">
             <% members.forEach(function(member){ %>
               <li> <%= member %> </li>
             <% }); %>
-             <li>DJ Jagannathan</li>
-             <li>Steve Jobs</li>
-             <li>Steve Wozniak</li>
             </ul>
             <span>Tags</span>
             <ul id="tagList">
               <li> <%=tags %> </li>
-              <li>#computers</li>
-              <li>#programming</li>
-              <li>#forprofit</li>
-              <li>#apple</li>
             </ul>
           </div>
           <div id="projectPitch">
-            <iframe width="300" height="150" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe><br>
+            <iframe width="300" height="150" src="<%=link%>" frameborder="5" allowfullscreen></iframe><br>
             <input id="request" type="submit" class="buttonBlue" value="Request to Join">
           </div>
         </div>

@@ -41,7 +41,6 @@ exports.getPic = function(email){
 }
 
 exports.project = function(req, id, callback){
-	console.log(req.files);
 	if(req.files.picture.size == 0){
 		var stream = fs.createReadStream('randopic');
 	} else {

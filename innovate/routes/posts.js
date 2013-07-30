@@ -1,5 +1,6 @@
 var db = require('../scripts/db');
 var s3 = require('../scripts/s3');
+var parser = require('../scripts/youtubeparse');
 var ObjectID = require("mongodb").ObjectID;
 
 exports.addUser = function(req, res){
@@ -57,12 +58,13 @@ exports.addProfile = function(req, res){
 
 exports.addProject = function(req, res){
 	var id = new ObjectID();
+	var youtube = parser.parse(req.body.projectPitchLink);
 	var postData = {
 		_id 	    : 	id.valueOf().toString(),
 		creator     :   req.session.user._id,
 		name        :   req.body.projectName,
 		tags        :   req.body.projectTags,
-		youtube     :   req.body.projectPitchLink,
+		youtube     :   youtube,
 		missing     :   req.body.projectTeam,
 		skills      :   req.body.projectSkills,
 		description :   req.body.projectDescription,
@@ -71,7 +73,7 @@ exports.addProject = function(req, res){
 	}
 	db.addProject(postData, function(good, project){
 		if(good){
-			s3.project(req, project._id, function(great){
+			s3.project(req, postData._id, function(great){
 				if(great){
 					res.redirect('/profile');
 				} else {

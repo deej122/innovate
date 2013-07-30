@@ -79,7 +79,11 @@ exports.profile = function(req, res){
 };
 
 exports.new = function(req, res){
-	res.render('new', {title: "Create a Campaign"});
+	if(req.session.user == null){
+		res.redirect('/');
+	} else {
+		res.render('new', {title: "Create a Campaign"});
+	}
 };
 
 exports.pitches = function(req, res){

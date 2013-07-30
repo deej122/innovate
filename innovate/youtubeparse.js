@@ -9,5 +9,5 @@ if(y != -1){
 	console.log(yes);
 }
 
-var iframe = "<iframe width="+'"560"'+" height = "+'"315"'+" src = " + '"//www.youtube.com/embed/'+yes+"?rel=0" + 'frameborder = ' +'"0"' + "allowfullscreen></iframe>";
-console.log(iframe);
+var src = "//www.youtube.com/embed/"+yes+"?rel=0";
+console.log(src);
