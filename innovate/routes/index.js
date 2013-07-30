@@ -47,7 +47,7 @@ exports.profile = function(req, res){
 							projectName: project.name,
 							members: project.members,
 							tags: project.tags,
-							link: project.link,
+							link: project.youtube,
 							description: project.description,
 							projImg: url,
 						}
