@@ -2,12 +2,12 @@
 <html>
   <head>
     <title><%=title%></title>
-    <link rel="stylesheet" type="text/css" href="common.css">
     <link rel="stylesheet" type="text/css" href="new.css"> 
+    <link rel="stylesheet" type="text/css" href="common.css">
     <link rel="stylesheet" type="text/css" href="modals.css">      
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="modals.css">   
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>  
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js" type="text/javascript"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -52,7 +52,7 @@
       <textarea rows="5" cols="50" id = "projectTags" name="projectTags" placeholder="List tags here (i.e. #nonprofit #computers #fun ...)" tabindex="2"></textarea><br><br><br>
       <label>Project Picture</label><br>
       <img id="preview" src="logo.png"><br>
-      <input type="button" name = "picture" id="uploadPicture" class="buttonBlue" value="Upload a Picture" tabindex="3"><br><br><br>
+      <input type="button" id="uploadPicture" class="buttonBlue" value="Upload a Picture" tabindex="3"><br><br><br>
       <input type="file" name = "picture" id="uploadPic" style="display:none;">
       <label>Attach a Link to Your Pitch on YouTube</label><br>
       <input type="url" id="pitchLink" class="input" name="projectPitchLink" placeholder="Link to pitch on YouTube" tabindex="4"><br>
@@ -86,7 +86,8 @@
     </div>
   </div>
 
-   <script src="modals.js"></script>  
+
+
 
 
 
@@ -102,19 +103,20 @@
 <!--Picture Preview-->
 <script type="text/javascript">      
 function readURL(input) {
-      if (input.files && input.files[0]) {
+
+    if (input.files && input.files[0]) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
-        $('#preview').attr('src', e.target.result);
-      }
+            $('#preview').attr('src', e.target.result);
+        }
 
-      reader.readAsDataURL(input.files[0]);
+        reader.readAsDataURL(input.files[0]);
     }
-  }
+}
 
-  $("#uploadPic").change(function(){
-  readURL(this);
+$("#uploadPic").change(function(){
+    readURL(this);
 });
 </script>
 <!--End Picture Preview-->
@@ -224,7 +226,7 @@ swfobject.embedSWF("http://www.youtube.com/v/" + videoID + "?version=3&enablejsa
 </div>
 <!--Picture Preview-->
 <script type="text/javascript">      
-function readURL(input) {
+function readURL2(input) {
       if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -248,6 +250,9 @@ $('#uploadPictureProf').click(function() {
 });
 </script>
 <!--END Project Pic Upload Dialog-->
+
+
+
 <!--Link to modal JS file-->
 <script src="modals.js"></script>
 <!--end link to modal JS file-->
