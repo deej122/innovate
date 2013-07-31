@@ -26,12 +26,15 @@
 
 <body style="margin:0;min-width: 1100px;">
 	<header id="header">
-      <a href="/profile" class="brand" style="text-decoration:none">innovate</a>
+      <a href="/" class="brand" id="in" style="text-decoration:none" tabindex="">
+        <span id="brandTop">project:</span><br>
+        <span id="brandBottom">cinta</span>
+      </a>
   </header>
 
   <div id="join">
     <form action = "/signup" id="joinForm" class="infoForm" method="POST">
-      <span style="font-size:50px; color: rgba(0,0,0,.7);">Join innovate</span><br><br><br> 
+      <span style="font-size:50px; color: rgba(0,0,0,.7);">Join</span><br><br><br> 
       <input name="firstName" type="text" class="input" id="first_name" placeholder="First Name"><br><br>
       <input name="lastName" type="text" class="input" id="last_name" placeholder="Last Name"><br><br>
       <input name="email" type="text" class="input" id="email" placeholder="Email"><br><br>
@@ -43,10 +46,8 @@
 
   <div id="login">
       <form action = "/login" method = "POST" id="enterForm" class="infoForm">
-        <span id="enterLabel" style="font-size:50px; color: rgba(0,0,0,.7);">Enter innovate</span><br><br><br>
-        <label id="em">Your Email</label><br>  
+        <span id="enterLabel" style="font-size:50px; color: rgba(0,0,0,.7);">Enter</span><br><br><br>  
         <input name = "email" type="text" class="input" id="loginEmail" placeholder="Email"><br><br>
-        <label id="pw">Your Password</label><br>
         <input name = "password" type="password" class="input" id="loginPW" placeholder="Password"><br><br>
         <label for = "remember" id = "remember"> Remember Me: </label>
         <input type = "checkbox" checked = "checked" id="checkbox">
