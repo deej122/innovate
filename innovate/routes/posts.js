@@ -58,12 +58,13 @@ exports.addProfile = function(req, res){
 
 exports.addProject = function(req, res){
 	var id = new ObjectID();
-	var youtube = parser.parse(req.body.projectPitchLink);
+	var youtube = parser.linkParse(req.body.projectPitchLink);
+	var tags = parser.commaParse(req.body.allTags);
 	var postData = {
 		_id 	    : 	id.valueOf().toString(),
 		creator     :   req.session.user._id,
 		name        :   req.body.projectName,
-		tags        :   req.body.projectTags,
+		tags        :   tags,
 		youtube     :   youtube,
 		missing     :   req.body.projectTeam,
 		skills      :   req.body.projectSkills,
