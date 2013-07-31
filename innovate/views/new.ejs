@@ -7,11 +7,16 @@
     <link rel="stylesheet" type="text/css" href="modals.css">      
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>  
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js" type="text/javascript"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="new.js"></script>
+    <script src="new.js"></script>  
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="tag-it.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css">
+    <link href="jquery.tagit.css" rel="stylesheet" type="text/css">    
 
     <style type="text/css">
       body {
@@ -27,7 +32,7 @@
   
 <body style="margin:0;min-width: 1100px;">
   <header id="header">
-      <a href="/" class="brand" id="in" style="text-decoration:none" tabindex="13">innovate</a>
+      <a href="/" class="brand" id="in" style="text-decoration:none" tabindex="13">project: cinta</a>
 
       <ul class="header_list">
         <li><a href="/home" id="leave" tabindex="12">Sign Out</a></li>
@@ -49,7 +54,7 @@
       <label>Give Your Project a Name</label><br>
       <input type="text" id = "projectName" name="projectName" class="input" placeholder="Name of project" tabindex="1"><br><br><br>
       <label>Tags</label><br>
-      <textarea rows="5" cols="50" id = "projectTags" name="projectTags" placeholder="List tags here (i.e. #nonprofit #computers #fun ...)" tabindex="2"></textarea><br><br><br>
+      <input type="text" id="myTags" name="allTags"><br><br><br><br><br>
       <label>Project Picture</label><br>
       <img id="preview" src="logo.png"><br>
       <input type="button" id="uploadPicture" class="buttonBlue" value="Upload a Picture" tabindex="3"><br><br><br>
@@ -251,9 +256,27 @@ $('#uploadPictureProf').click(function() {
 <!--END Project Pic Upload Dialog-->
 
 
-
 <!--Link to modal JS file-->
 <script src="modals.js"></script>
 <!--end link to modal JS file-->
+
+
+
+
+
+
+
+<!--Tags-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#myTags").tagit({
+          availableTags: ["nonprofit", "startup", "website", "initiative"]
+        });
+    });
+</script>
+<!--End Tags-->
+
+
+
 </body>
 </html>  
