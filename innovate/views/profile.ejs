@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
+
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -127,7 +128,7 @@
           <br>
           <span class="profile_label">Current Project:</span><br>
           <ul id="currentInfo" class="project_portfolio_list" onclick="showProj();">
-            <li id="currentName">Apple Computers</li>
+            <li id="currentName"><%=projectName%></li>
             <li id="currentTime">1976 - present</li>
           </ul>
           <span class="profile_label">Past Projects:</span><br><br>
@@ -166,11 +167,10 @@
               <li> <%= member %> </li>
             <% }); %>
             </ul>
+
             <span>Tags</span>
             <ul id="tagList">
-              <% tags.forEach(function(tag){ %>
-                <li> <%= tag %> </li>
-              <% }); %>
+              <li> <%=tags %> </li>
             </ul>
           </div>
           <div id="projectPitch">
@@ -316,5 +316,11 @@ $('#uploadPictureProf').click(function() {
 <!--Link to modal JS file-->
 <script src="modals.js"></script>
 <!--end link to modal JS file-->
+
+
+
+
+
+
 </body>
 </html>

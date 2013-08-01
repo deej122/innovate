@@ -159,6 +159,7 @@
 #previousProjects{
 	height: 240px;
 	overflow-y: auto;
+	font-family: 'Nunito', sans-serif;
 }
 
 .project_portfolio_list{
@@ -215,7 +216,7 @@
 
 /*project section styling*/
 #projectContent{
-	min-width: 660px;
+	min-width: 700px;
 }
 #projectInfo{
 	height: 190px;
@@ -227,6 +228,8 @@
 	float: left;
 	margin-left: 3%;
 	vertical-align: top;
+	width: 30%;
+	overflow: auto;
 }
 
 #projectName{
@@ -251,6 +254,7 @@
 	margin-top: 0px;
 	list-style-type: none;
 	height: 58px;
+	max-width: 100px;
 	overflow: auto;
 	font-size: 15px;
 }
@@ -268,13 +272,14 @@
 #projectPitch{
 	float: right;
 	margin-right: 2%;
+	width: 40%;
 }
 
 #projectDescription{
 	height: 240px;
 	overflow-y: auto;
+	font-family: 'Nunito', sans-serif;	
 }
-
 
 /*end project section styling*/
 
