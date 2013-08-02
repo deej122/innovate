@@ -2,6 +2,7 @@ var db = require('../scripts/db');
 var s3 = require('../scripts/s3');
 var parser = require('../scripts/youtubeparse');
 var ObjectID = require("mongodb").ObjectID;
+var moment = require('moment');
 
 exports.addUser = function(req, res){
 	var userObj = {
@@ -70,6 +71,7 @@ exports.addProject = function(req, res){
 		skills      :   req.body.projectSkills,
 		description :   req.body.projectDescription,
 		members     :   [req.session.user._id],
+		date        :   moment().format('MMMM Do YYYY, h:mm:ss a'),
 		status      :   "Active"
 	}
 	db.pullMember(req.session.user, function(fantastic){

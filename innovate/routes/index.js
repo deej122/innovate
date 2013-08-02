@@ -26,7 +26,7 @@ exports.create = function(req, res){
 	if(req.session.user == null){
 		res.redirect('/home');
 	} else {
-		db.getProfile(req.session.user, function(good){
+		db.getProfile(req.session.usrer, function(good){
 			if(good){
 				res.redirect('/profile');
 			} else{
@@ -95,7 +95,7 @@ exports.new = function(req, res){
 };
 
 exports.pitches = function(req, res){
-	res.render('pitches', {title: "Create a Campaign"});
+	res.render('pitches', {title: "Pitch You!"});
 };
 
 exports.logout = function(req, res){
