@@ -7,10 +7,10 @@
     <link rel="stylesheet" type="text/css" href="modals.css">    
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>  
     <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
-    <script src="profile.js"></script>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="profile.js"></script>
 
 
     <style type="text/css">
@@ -236,6 +236,22 @@
           </table>                      
         </div>
 
+    </div>
+  </div>
+
+  <div id = "areyousure" class = "modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <span data-dismiss="modal" aria-hidden="true" style = "float:right; cursor:pointer;">x</span>
+      <h3> Are you sure about that? </h3> 
+      <div id = "areyousureContent">
+        <!-- CONTENT GOES HERE -->
+        <p> It looks like you're already a part of a different project. </p>
+        <p> If you successfully create or join a new project, your progress on your current will be lost.</p>
+        <p> If you're okay with that, please click YES. If not, click NO. </p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="buttonRed" data-dismiss="modal" aria-hidden="true" style="">Close</button>
     </div>
   </div>
 

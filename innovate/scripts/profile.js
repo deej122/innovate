@@ -1,7 +1,26 @@
+  $(document).ready(function(){
+    $('#newProject').click(function(e){
+      alert("Happening?");
+      e.preventDefault();
+      $.ajax({
+        url: '/getProject',
+        type: 'POST',
+        cache: false,
+        success: function(data){
+          if(data.msg == 'no'){
+            $('#areyousure').modal('show');
+            //make modal appear with the painful text
+          } else{
+            $(this).unbind('click');
+            $(this).click();
+          }
+        }
+      })
+    })
+  })
+
     function showPort()
     {
- 
-
       if ( document.getElementById('portfolioContent').style.display == "none" ) {
             document.getElementById('portfolioContent').style.display= "";
           } /*else {

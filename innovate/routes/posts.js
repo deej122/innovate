@@ -86,3 +86,14 @@ exports.addProject = function(req, res){
 		}
 	})
 }
+
+exports.getProject = function(req, res){
+	var id = req.session.user._id;
+	db.getProject(id, function(good, project){
+		if(good){
+			res.send({msg: 'no'});
+		} else{
+			res.send({msg: 'ok'});
+		}
+	})
+}
