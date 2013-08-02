@@ -7,11 +7,19 @@ var db = require('../scripts/db.js');
 var s3 = require('../scripts/s3.js');
 
 exports.index = function(req, res){
-  res.render('landing', { title: 'innovate' });
+  if(req.session.user != null){
+  	res.redirect('/profile');
+  } else {
+  	res.render('landing', { title: 'innovate' });
+  }
 };
 
 exports.home = function(req, res){
-	res.render('home', {title: 'Home'});
+	if(req.session.user != null){
+		res.redirect('/profile');
+	} else {
+		res.render('home', {title: 'Home'});
+	}
 };
 
 exports.create = function(req, res){
