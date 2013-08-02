@@ -72,17 +72,23 @@ exports.addProject = function(req, res){
 		members     :   [req.session.user._id],
 		status      :   "Active"
 	}
-	db.addProject(postData, function(good, project){
-		if(good){
-			s3.project(req, postData._id, function(great){
-				if(great){
-					res.redirect('/profile');
+	db.pullMember(req.session.user, function(fantastic){
+		if(fantastic){
+			db.addProject(postData, function(good, project){
+				if(good){
+					s3.project(req, postData._id, function(great){
+						if(great){
+							res.redirect('/profile');
+						} else {
+							res.send('There was an error');
+						}
+					})
 				} else {
-					res.send('There was an error');
+					res.send('There was an error.');
 				}
 			})
 		} else {
-			res.send('There was an error.');
+			res.send('There was an error. Refresh and try again.');
 		}
 	})
 }

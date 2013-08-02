@@ -63,7 +63,7 @@ exports.profile = function(req, res){
 							img : proPic,
 							projectName: "Looks like you're not working on any projects.",
 							members: [],
-							tags: "",
+							tags: [],
 							link: "",//some default video about project cinta,
 							description: "Click the links above to either create a project or join one! It's what the cool kids are doing.",
 							projImg: url,

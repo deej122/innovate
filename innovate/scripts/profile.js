@@ -1,6 +1,5 @@
   $(document).ready(function(){
     $('#newProject').click(function(e){
-      alert("Happening?");
       e.preventDefault();
       $.ajax({
         url: '/getProject',
@@ -11,8 +10,8 @@
             $('#areyousure').modal('show');
             //make modal appear with the painful text
           } else{
-            $(this).unbind('click');
-            $(this).click();
+            $('#newProject').unbind('click');
+            window.location = "/new";
           }
         }
       })

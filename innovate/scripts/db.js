@@ -74,7 +74,16 @@ var getProject = function(id, callback){
 	})
 }
 
+var pullMember = function(userObject, callback){
+	db.projects.update({members: userObject._id}, {$pull: {members: userObject._id}}, function(e, o){
+		if(e) callback(0);
+		else callback(1);
+	});
+}
 
+var pushMember = function(userObject, callback){
+	
+}
 
 exports.addUser = addUser;
 exports.getUser = getUser;
@@ -82,3 +91,4 @@ exports.getProfile = getProfile;
 exports.addProfile = addProfile;
 exports.addProject = addProject;
 exports.getProject = getProject;
+exports.pullMember = pullMember;
