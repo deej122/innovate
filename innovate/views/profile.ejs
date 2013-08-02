@@ -170,7 +170,9 @@
 
             <span>Tags</span>
             <ul id="tagList">
-              <li> <%=tags %> </li>
+            	<% tags.forEach(function(tag){ %>
+            		<li> <%=tag %> </li>
+            	<% }); %>
             </ul>
           </div>
           <div id="projectPitch">
