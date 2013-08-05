@@ -26,7 +26,7 @@ exports.create = function(req, res){
 	if(req.session.user == null){
 		res.redirect('/home');
 	} else {
-		db.getProfile(req.session.usrer, function(good){
+		db.getProfile(req.session.user, function(good){
 			if(good){
 				res.redirect('/profile');
 			} else{
