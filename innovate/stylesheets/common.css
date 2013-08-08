@@ -13,7 +13,6 @@ html{
 
 /*header style*/
 #header {
-    background-color: #009ACD;
     width:100%;
     min-width: 400px;
     height: 48px;
@@ -27,7 +26,6 @@ html{
     -moz-box-shadow:    1px 1px 5px 2px rgba(0,0,0,.3);
     -webkit-box-shadow: 1px 1px 5px 2px rgba(0,0,0,.3);
     box-shadow:         1px 1px 5px 2px rgba(0,0,0,.3);
-    font-family: 'Cedarville Cursive', cursive;     
 }
 
 .brand{
@@ -36,6 +34,7 @@ html{
     vertical-align: middle;
     margin-left: 1%;
     color: rgba(0, 0, 0, .8);
+    font-family: 'Cedarville Cursive', cursive;         
 }
 
 #brandTop #brandBottom{
