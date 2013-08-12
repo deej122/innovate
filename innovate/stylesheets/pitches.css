@@ -12,26 +12,28 @@
 	display: inline-block;
 	color: rgba(0,0,0,.8);
 	height: 600px;
-	width: 85%;
+	width: 70%;
+	min-width: 940px;
 	margin-left: 2%;
 	overflow-y: auto;
-	overflow-x: hidden; 	
+	overflow-x: auto; 	
 	float: left;
 	border-top: 1px groove rgba(0,0,0,.3);	
 	border-left: 1px groove rgba(0,0,0,.3);
 	border-right: 1px groove rgba(0,0,0,.3);
+	border-bottom: 1px groove rgba(0,0,0,.3);
 }
 
 
 .pitchRow{
-	display: block;
+	display: inline-block;
 	width: 100%;
 	border-bottom: 1px groove rgba(0,0,0,.3);
 }
 
 .thePitch{
-	text-align: center;
-	width: 30%;
+	float: left;
+	width: 32%;
 	max-width: 352px;
 	padding: 5px;
 	border-right: 1px groove rgba(0,0,0,.3);
@@ -43,7 +45,6 @@ iframe{
 
 .necInfo{
 	text-align: left;
-	margin-left: 12%;
 }
 .projectName{
 	text-decoration: none;
@@ -72,8 +73,7 @@ iframe{
 }
 
 .request{
-	float: left;
-	margin-left: 13%;
+
 }
 
 #commonTags{

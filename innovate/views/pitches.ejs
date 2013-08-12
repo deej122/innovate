@@ -45,29 +45,31 @@
 
   <div id="allPitches">
     <table id="pitchTable">
+        <script>
+      $("td:last-child").css({border:"none"})
+    </script>
       <tr class="pitchRow">
           <% pitches.forEach(function(pitch){ %>
             <% if(counter != 3){ %>
               <td class = "thePitch">
-                <div class = "necInfo">
-                  <a href = "#projectInfo" data-toggle = "modal" class = "projectName"> <%= pitch.name %> </a></br>
+                <div class = "necInfo" style="float:left;">
+                  <a href = "#projectInfo" data-toggle = "modal" class = "projectName"> <%= pitch.name %> </a>
                 </div>
+                <br>
                 <iframe width="300" height = "200" src="<%=pitch.youtube%>" frameborder = "5" allowfullscreen></iframe><br>
                 <input type = "submit" class = "buttonBlue request" value = "Request to Join">
             <% } else{ %>
                 <tr class = "pitchRow">
                 <td class = "thePitch">
                 <div class = "necInfo">
-                  <a href = "#projectInfo" data-toggle = "modal" class = "projectName"> <%=pitch.name %> </a></br>
+                  <a href = "#projectInfo" data-toggle = "modal" class = "projectName"> <%=pitch.name %> </a>
                 </div>
-                <iframe width="300" height = "200" src="<%=pitch.youtube%>" frameborder = "5" allowfullscreen></iframe><br>
+                <iframe width="300" height = "200" src="<%=pitch.youtube%>" frameborder = "5" allowfullscreen></iframe>
+                <br>
                 <input type = "submit" class = "buttonBlue request" value = "Request to Join">
             <% counter = 0;}       %>
-            <% ++counter; %>
+            <% ++ counter; %>
           <% }); %>
-    <script>
-      $("td:last-child").css({border:"none"})
-    </script>
     </table>
 
     <br><br>
