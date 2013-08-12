@@ -95,7 +95,13 @@ exports.new = function(req, res){
 };
 
 exports.pitches = function(req, res){
-	res.render('pitches', {title: "Pitch You!"});
+	db.getAll(function(good, pitches){
+		if(good){
+			res.render('pitches', {title: "Pitch You!", pitches: pitches});
+		} else{
+			res.send('not ok, refresh.');
+		}
+	})
 };
 
 exports.logout = function(req, res){

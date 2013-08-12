@@ -10,8 +10,6 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js" type="text/javascript"></script>
-    <script src="/include/ejs_production.js" type="text/javascript"></script>
-    <script src="/include/jquery.ejs.js" type="text/javascript"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
     <style type="text/css">
@@ -22,7 +20,7 @@
       }
 
     </style>
-
+    <% var counter = 0; %>
 
   </head>
   
@@ -46,90 +44,27 @@
   </div>
 
   <div id="allPitches">
-
     <table id="pitchTable">
       <tr class="pitchRow">
-        <td class="thePitch">
-          <div class="necInfo">
-            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
-            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
-          </div>
-          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe><br>
-          <input type="submit" class="buttonBlue request" value="Request to Join">
-        </td>
-        <td class="thePitch">
-          <div class="necInfo">
-            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
-            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
-          </div>
-          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
-          <input type="submit" class="buttonBlue request" value="Request to Join">
-        </td>  
-        <td class="thePitch">
-          <div class="necInfo">
-            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
-            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
-          </div>
-          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
-          <input type="submit" class="buttonBlue request" value="Request to Join">
-        </td>                                
-      </tr>
-
-      <tr class="pitchRow">
-        <td class="thePitch">
-          <div class="necInfo">
-            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
-            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
-          </div>
-          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe><br>
-          <input type="submit" class="buttonBlue request" value="Request to Join">
-        </td>
-        <td class="thePitch">
-          <div class="necInfo">
-            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
-            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
-          </div>
-          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
-          <input type="submit" class="buttonBlue request" value="Request to Join">
-        </td>  
-        <td class="thePitch">
-          <div class="necInfo">
-            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
-            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
-          </div>
-          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
-          <input type="submit" class="buttonBlue request" value="Request to Join">
-        </td>                                
-      </tr>
-
-      <tr class="pitchRow">
-        <td class="thePitch">
-          <div class="necInfo">
-            <a href="#projectInfo"data-toggle="modal"  class="projectName">Apple Computers</a><br>
-            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
-          </div>
-          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe><br>
-          <input type="submit" class="buttonBlue request" value="Request to Join">
-        </td>
-        <td class="thePitch">
-          <div class="necInfo">
-            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
-            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
-          </div>
-          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
-          <input type="submit" class="buttonBlue request" value="Request to Join">
-        </td>  
-        <td class="thePitch">
-          <div class="necInfo">
-            <a href="#projectInfo" data-toggle="modal" class="projectName">Apple Computers</a><br>
-            <a href="/profileView" class="personName">DJ Jagannathan</a><br>
-          </div>
-          <iframe width="300" height="200" src="//www.youtube.com/embed/SswMzUWOiJg" frameborder="5" allowfullscreen></iframe>
-          <input type="submit" class="buttonBlue request" value="Request to Join">
-        </td>                                
-      </tr>
-
-
+          <% pitches.forEach(function(pitch){ %>
+            <% if(counter != 3){ %>
+              <td class = "thePitch">
+                <div class = "necInfo">
+                  <a href = "#projectInfo" data-toggle = "modal" class = "projectName"> <%= pitch.name %> </a></br>
+                </div>
+                <iframe width="300" height = "200" src="<%=pitch.youtube%>" frameborder = "5" allowfullscreen></iframe><br>
+                <input type = "submit" class = "buttonBlue request" value = "Request to Join">
+            <% } else{ %>
+                <tr class = "pitchRow">
+                <td class = "thePitch">
+                <div class = "necInfo">
+                  <a href = "#projectInfo" data-toggle = "modal" class = "projectName"> <%=pitch.name %> </a></br>
+                </div>
+                <iframe width="300" height = "200" src="<%=pitch.youtube%>" frameborder = "5" allowfullscreen></iframe><br>
+                <input type = "submit" class = "buttonBlue request" value = "Request to Join">
+            <% counter = 0;}       %>
+            <% ++counter; %>
+          <% }); %>
     <script>
       $("td:last-child").css({border:"none"})
     </script>

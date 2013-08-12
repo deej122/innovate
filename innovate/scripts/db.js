@@ -85,6 +85,13 @@ var pushMember = function(userObject, callback){
 	
 }
 
+var getAll = function(callback){
+	db.projects.find(function(e, o){
+		if(e) callback(0);
+		else callback(1, o);
+	});
+}
+
 exports.addUser = addUser;
 exports.getUser = getUser;
 exports.getProfile = getProfile;
@@ -92,3 +99,4 @@ exports.addProfile = addProfile;
 exports.addProject = addProject;
 exports.getProject = getProject;
 exports.pullMember = pullMember;
+exports.getAll = getAll;
