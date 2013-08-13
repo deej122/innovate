@@ -18,7 +18,7 @@ var projectClient = knox.createClient({
 })
 exports.picture = function(req, callback){
 	if(req.files.picture.size == 0){
-		var stream = fs.createReadStream('randopic');
+		var stream = fs.createReadStream('images/blueLightBulb.png');
 	} else{
 		var stream = fs.createReadStream(req.files.picture.path);
 	}
@@ -29,7 +29,7 @@ exports.picture = function(req, callback){
 			stream: stream
 		}, function(e, o){
 			if(e) {
-				callback(0);
+				callback(0, e);
 			}
 			else callback(1);
 		}
@@ -42,7 +42,7 @@ exports.getPic = function(email){
 
 exports.project = function(req, id, callback){
 	if(req.files.picture.size == 0){
-		var stream = fs.createReadStream('randopic');
+		var stream = fs.createReadStream('images/redLightBulb.png');
 	} else {
 		var stream = fs.createReadStream(req.files.picture.path);
 	}
@@ -53,7 +53,7 @@ exports.project = function(req, id, callback){
 			stream: stream
 
 		}, function(e, o){
-			if(e) callback(0);
+			if(e) callback(0, e);
 			else callback(1);
 		}
 	)
