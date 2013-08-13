@@ -33,7 +33,7 @@
 
 .thePitch{
 	float: left;
-	width: 32%;
+	min-width: 32%;
 	max-width: 352px;
 	padding: 5px;
 	border-right: 1px groove rgba(0,0,0,.3);
