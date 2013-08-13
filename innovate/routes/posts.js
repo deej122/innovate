@@ -105,3 +105,24 @@ exports.getProject = function(req, res){
 		}
 	})
 }
+
+exports.getProjectById = function(req, res){
+	var id = req.body.id;
+	db.getProjById(id, function(good, project){
+		if(!good){
+			res.send({msg: "nok"});
+		} else{
+			var url = s3.getProj(id);
+			var dataObj = {
+				msg: "ok",
+				name: project.name,
+				description: project.description,
+				tags: project.tags,
+				members: project.members,
+				link: project.youtube,
+				img: url
+			}
+			res.send(dataObj);
+		}
+	});
+}

@@ -74,6 +74,17 @@ var getProject = function(id, callback){
 	})
 }
 
+var getProjById = function(id, callback){
+	db.projects.findOne({_id: id}, function(e, o){
+		if(e) callback(0);
+		if(!o){
+			callback(0);
+		} else{
+			callback(1, o);
+		}
+	})
+}
+
 var pullMember = function(userObject, callback){
 	db.projects.update({members: userObject._id}, {$pull: {members: userObject._id}}, function(e, o){
 		if(e) callback(0);
@@ -99,4 +110,6 @@ exports.addProfile = addProfile;
 exports.addProject = addProject;
 exports.getProject = getProject;
 exports.pullMember = pullMember;
+exports.pushMember = pushMember;
 exports.getAll = getAll;
+exports.getProjById = getProjById;
