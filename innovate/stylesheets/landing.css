@@ -8,6 +8,7 @@ html{
 	margin-right: 2%;
 	text-decoration: none;
 	color: #0084B4;
+	z-index: 10000;
 }
 
 #skip:hover{
@@ -17,6 +18,7 @@ html{
 #allSteps{
 	margin: auto;
 	text-align: center;
+	margin-top: 30px;
 }
 
 #welcome{
