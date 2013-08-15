@@ -62,7 +62,7 @@ exports.profile = function(req, res){
 						res.render('profile', data);
 					} else {
 						var proPic = s3.getPic(req.session.user._id);
-						var url = "" //some default ID
+						var url = "grayLightBulb.png"; //some default ID
 						var data = {
 							title: 'Profile',
 							name : req.session.user.name,
