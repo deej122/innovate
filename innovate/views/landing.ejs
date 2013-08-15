@@ -24,6 +24,8 @@
   </head>
   
 <body style="margin:0;min-width: 1100px;">
+<div id="bgWhite">
+</div>
   <header id="header">
       <a href="/" class="brand" id="in" style="text-decoration:none" tabindex="13">
         <span>project: cinta</span>
@@ -33,24 +35,20 @@
 <a href="/home" id="skip">Skip >> </a>
 
 <div id="allSteps">
+    <h3 id="welcome">
+      Welcome to: 
+    </h3>
 
-  <div class="step" id="stepOne">
-   <span class="stepLabel">Step One</span><br>
-   <span class="stepText">Record your pitch on YouTube</span>
-  </div>
-
-  <div class="step" id="stepTwo">  
-   <span class="stepLabel">Step Two</span><br>
-   <span class="stepText">Form a team with your friends</span>
-  </div>
-
-  <div class="step" id="stepThree">  
-   <span class="stepLabel">Step Three</span><br>
-   <span class="stepText">innovate</span>
+  <div class="lightbulb">
+    <div id="off">
+      <img id"bulbOff" src="graydull.png"/>
+    </div>
+    <img id="bulbOn" src="yellowshine.png" style="display:none;"/>
   </div>  
-  <br><br><br>
-  <a href="/home" class="button" id="proceed">I'm Ready</a>
 
+  <div id = "cintaLabel" style="display:none;">
+    <p>project:cinta</p>
+  </div>  
 </div>
 
 
@@ -61,10 +59,11 @@
 <script type="text/javascript">
 $(document).ready(function() 
 {
-    $( '#stepOne' ).delay(500).fadeIn(1000); 
-    $( '#stepTwo' ).delay(1500).fadeIn(1000);
-    $( '#stepThree' ).delay(2500).fadeIn(1000); 
-    $( '#proceed' ).delay(3500).fadeIn(1000);  
+    $( '#cintaLabel' ).delay(1000).fadeIn(1000); 
+    $( '#welcome' ).fadeTo( 1000, 0 );
+    $( '#off' ).delay(1500).fadeOut(0); 
+    $( '#bulbOn' ).delay(1500).fadeIn(0); 
+/*    $( 'html' ).delay(1500).css('background-color','#FFFFFF');   */
 });
 </script>
 
