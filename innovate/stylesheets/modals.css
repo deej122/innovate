@@ -126,6 +126,22 @@
 
 /*end pitches projectBig styling*/
 
+/*addGoal styling*/
+
+#addGoal{
+  width: 500px;
+  margin-left: -100px;
+}
+
+#addGoalContent{
+  margin-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px; 
+}
+
+
+/*end addGoal styling*/
+
 
 /*!
  * Bootstrap v2.3.1

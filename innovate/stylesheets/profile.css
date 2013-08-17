@@ -211,6 +211,7 @@
 #pastTime{
 	width: 25%;
 	text-align: right;
+	display: none;
 }
 /*end portfolio section styling*/
 
@@ -304,10 +305,10 @@
 
 }
 
-#progressInfo table{
+#progressInfo ul{
 	display: inline-block;
 	color: rgba(0,0,0,.8);
-	height: 400px;
+	max-height: 400px;
 	overflow: auto;	
 }
 
@@ -315,31 +316,36 @@
 	text-align: center;
 }
 
+#plusGoal{
+	text-decoration: none;
+	padding: 3px;
+}
+
 #goalsInfo{
 	float: left;
-	width: 45%;
+	width: 40%;
 
 }
 
-#goalsInfo tr{
+#goalsInfo li{
 	width: 100%;
 }
 
-#goalsInfo tr td{
+#goalsInfo li span{
 	padding: 
 }
 
 #achievedInfo{
-	float: right;
-	width: 45%;
+	float: left;
+	width: 40%;
 }
 
-#achievedInfo tr{
+#achievedInfo li{
 	width: 100%;
 }
 
 .goalRow{
-	display: block;
+	display: inline-block;
 	border-bottom: 1px solid rgba(0,0,0,.2);
 }
 
@@ -359,18 +365,23 @@
 }
 
 .goalName{
+	max-width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	width: 80%;
+	float: left;
 	text-align: left;
 }
 
 .goalCheck{
 	width: 10%;
-	text-align: right;
+	float: left;
 }
 
 .goalEx{
 	width: 10%;
-	text-align: right;
+	float: left;
 }
 
 .buttonCheck{

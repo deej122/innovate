@@ -193,71 +193,75 @@
 <!--Progress-->
       <div id="progressContent" style="display:none;">
         <div id="progressInfo">
-          <span id="goal">Goals <input type="button" class="buttonBlue" value="+ Add"></span>
+          <span id="goal">Goals <a href="#addGoal" data-toggle="modal" id="plusGoal" class="buttonBlue">+ Add</a></span>
           <span id="achieved">Achieved</span><br><br>
-          <table id="goalsInfo">
-            <tr class="goalRow first">
-              <td class="goalName">Basic design of program flyer</td>
-              <td class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></td>
-              <td class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></td>
-            </tr>
-            <tr class="goalRow">
-              <td class="goalName">Start fundraising</td>
-              <td class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></td>
-              <td class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></td>
-            </tr>  
-            <tr class="goalRow">
-              <td class="goalName">Send out emails</td>
-              <td class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></td>
-              <td class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></td>
-            </tr>   
-            <tr class="goalRow">
-              <td class="goalName">Record longer pitch</td>
-              <td class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></td>
-              <td class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></td>
-            </tr>                                                                         
-          </table>
+          <ul id="goalsInfo">
+            <li class="goalRow first">
+              <span class="goalName">Basic design of program flyer</span>
+              <span class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></span>
+              <span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
+            </li>
+            <li class="goalRow">
+              <span class="goalName">Basic design of program flyer</span>
+              <span class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></span>
+              <span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
+            </li>
+            <li class="goalRow">
+              <span class="goalName">Basic design of program flyer</span>
+              <span class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></span>
+              <span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
+            </li>
+            <li class="goalRow">
+              <span class="goalName">Basic design of program flyer</span>
+              <span class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></span>
+              <span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
+            </li>                                                                     
+          </ul>
 
-          <table id="achievedInfo">
-            <tr class="achievedRow first">
-              <td class="goalName">Record pitch</td>
-              <td class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></td>
-            </tr>
-            <tr class="achievedRow">
-              <td class="goalName">Create rough business plan</td>
-              <td class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></td>              
-            </tr>  
-            <tr class="achievedRow">
-              <td class="goalName">Contact Gates Foundation</td>
-              <td class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></td>              
-            </tr>   
-            <tr class="achievedRow">
-              <td class="goalName">Come up with name and logo</td>
-              <td class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></td>              
-            </tr>                                                             
-          </table>                      
+          <ul id="achievedInfo">
+            <li class="achievedRow first">
+              <span class="goalName">Record pitch</span>
+              <span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
+            </li>
+            <li class="achievedRow">
+              <span class="goalName">Record pitch</span>
+              <span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
+            </li> 
+            <li class="achievedRow">
+              <span class="goalName">Record pitch</span>
+              <span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
+            </li>   
+            <li class="achievedRow">
+              <span class="goalName">Record pitch</span>
+              <span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
+            </li>                                                             
+          </ul>                      
         </div>
 
     </div>
   </div>
 
+<!--Are you sure modal-->
+
+
   <div id = "areyousure" class = "modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
       <span data-dismiss="modal" aria-hidden="true" style = "float:right; cursor:pointer;">x</span>
       <h3> Are you sure about that? </h3> 
+    </div>  
       <div id = "areyousureContent">
         <!-- CONTENT GOES HERE -->
         <p> It looks like you're already a part of a different project. </p>
         <p> If you successfully create or join a new project, your progress on your current project will be lost.</p>
         <p> If you're okay with that, please click YES. If not, click NO. </p>
       </div>
-    </div>
     <div class="modal-footer">
       <button class="buttonRed" data-dismiss="modal" aria-hidden="true" style="">No</button>
       <a href="/new" id="newYes" class="button">Yes</a>
     </div>
   </div>
 
+<!--end are you sure modal-->
  
 <!--Account Modal-->
 <div id="editAccount" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -306,6 +310,28 @@
 
     <!--END FORM-->
 </div>
+
+
+<!--Add goal modal-->
+
+  <div id = "addGoal" class = "modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <span data-dismiss="modal" aria-hidden="true" style = "float:right; cursor:pointer;">x</span>
+      <h3> Add a Goal </h3> 
+    </div>  
+      <div id = "addGoalContent">
+        <!-- CONTENT GOES HERE -->
+        <label>Create New Goal</label><br>
+        <input type="text" class="input" name="goalNew" placeholder="New Goal">
+      </div>
+    <div class="modal-footer">
+      <button class="buttonRed" data-dismiss="modal" aria-hidden="true" style="">Cancel</button>
+      <a href="/new" id="newYes" class="button">Add</a>
+    </div>
+  </div>
+
+<!--end add goal modal-->
+
 
 <!--Picture Preview-->
 <script type="text/javascript">      
