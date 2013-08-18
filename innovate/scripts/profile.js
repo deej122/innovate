@@ -15,7 +15,28 @@
           }
         }
       })
-    })
+    });
+    $('#goalSubmit').click(function(e){
+      var goal = $('#newwGoal').val();
+      e.preventDefault();
+      $('#goalForm')[0].checkValidity();
+      $.ajax({
+        url: '/addGoal',
+        type: 'POST',
+        cache: false,
+        data: {goal: goal},
+        success: function(data){
+          //do the adding goals here erghnuggets
+          if(data.msg == 'ok'){
+            //do the stuff with the data.msg
+          } else{
+            alert("There was an error. Please try again.");
+          }
+        }
+      })
+    });
+
+
   })
 
     function showPort()

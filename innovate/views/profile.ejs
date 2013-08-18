@@ -321,16 +321,19 @@
     </div>  
       <div id = "addGoalContent">
         <!-- CONTENT GOES HERE -->
-        <label>Create New Goal</label><br>
-        <input type="text" class="input" name="goalNew" placeholder="New Goal">
+        <label>Create New Goal</label><br><br>
+        <form method = "POST" id = "goalForm">
+          <input type="text" id = "newwGoal" class="input" name="newGoal" placeholder="New Goal" required><br>
+          <input type="submit" id = "goalSubmit" class="button" value="Add" style="">
+        </form>
       </div>
     <div class="modal-footer">
       <button class="buttonRed" data-dismiss="modal" aria-hidden="true" style="">Cancel</button>
-      <input type="submit" class="button" value="Add" style="">
     </div>
   </div>
 
 <!--end add goal modal-->
+
 
 
 <!--Picture Preview-->

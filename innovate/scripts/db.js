@@ -103,6 +103,15 @@ var getAll = function(callback){
 	});
 }
 
+var addGoal = function(id, goalData, callback){
+	db.projects.update({members: id}, {$push: {goals: goalData}}, function(e, o){
+		if(e) callback(0);
+		else{
+			callback(1);
+		}
+	});
+}
+
 exports.addUser = addUser;
 exports.getUser = getUser;
 exports.getProfile = getProfile;
@@ -113,3 +122,4 @@ exports.pullMember = pullMember;
 exports.pushMember = pushMember;
 exports.getAll = getAll;
 exports.getProjById = getProjById;
+exports.addGoal = addGoal;
