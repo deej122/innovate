@@ -16,29 +16,39 @@
         }
       })
     });
+    $('.goalCheck').click(function(){
+      alert("hello!");
+    })
     $('#goalSubmit').click(function(e){
-      var goal = $('#newwGoal').val();
       e.preventDefault();
-      $('#goalForm')[0].checkValidity();
-      $.ajax({
+      var goal = $('#newwGoal').val();
+      if($('#goalForm')[0].checkValidity()){
+        $.ajax({
         url: '/addGoal',
         type: 'POST',
         cache: false,
         data: {goal: goal},
         success: function(data){
-          //do the adding goals here erghnuggets
+          //do the adding goals here erghnuggets visually
           if(data.msg == 'ok'){
             //do the stuff with the data.msg
+            html = '<li class = "goalRow"><span class = "goalName">'+goal+'</span>';
+            html += '<span class = "goalCheck"><input type = "button" class = "buttonCheck" value = "&#10003;"></span>';
+            html += '<span class = "goalEx"><input type = "button" class = "buttonEx" value = "&#10007;"></span></li>';
+
+            $('#goalsInfo').append(html);
+            $('#newwGoal').val("");
+            $('#addGoal').modal('hide');
           } else{
             alert("There was an error. Please try again.");
           }
         }
       })
+      } else{
+        toastr.error('Please enter a goal.');
+      }
     });
-
-
   })
-
     function showPort()
     {
       if ( document.getElementById('portfolioContent').style.display == "none" ) {
