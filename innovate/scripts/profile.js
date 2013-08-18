@@ -16,9 +16,9 @@
         }
       })
     });
-    $('.goalCheck').click(function(){
+    $(document).on('click', '.goalCheck', function(){
       alert("hello!");
-    })
+    });
     $('#goalSubmit').click(function(e){
       e.preventDefault();
       var goal = $('#newwGoal').val();
@@ -35,7 +35,6 @@
             html = '<li class = "goalRow"><span class = "goalName">'+goal+'</span>';
             html += '<span class = "goalCheck"><input type = "button" class = "buttonCheck" value = "&#10003;"></span>';
             html += '<span class = "goalEx"><input type = "button" class = "buttonEx" value = "&#10007;"></span></li>';
-
             $('#goalsInfo').append(html);
             $('#newwGoal').val("");
             $('#addGoal').modal('hide');
