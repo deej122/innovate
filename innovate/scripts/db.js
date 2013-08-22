@@ -104,7 +104,10 @@ var getAll = function(callback){
 }
 
 var goalLength = function(id){
-	db.projects.find({members: id}, function(e, o){
+	db.projects.findOne({members: id}, function(e, o){
+		if(o.goals == undefined){
+			return 0;
+		}
 		if(o.goals.length == 0){
 			return o.goals.length;
 		} else{

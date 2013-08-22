@@ -130,6 +130,8 @@ exports.getProjectById = function(req, res){
 exports.addGoal = function(req, res){
 	var id = req.session.user._id;
 	var goal = req.body.goal;
+	var number = db.goalLength(id);
+	console.log(number);
 	var goalObject = {
 		goal: goal,
 		status: "unfinished",
