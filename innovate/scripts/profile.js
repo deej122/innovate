@@ -19,6 +19,9 @@
     $(document).on('click', '.goalCheck', function(){
       alert("hello!");
     });
+    $(document).on('click', '.goalEx', function(){
+      alert("hello!");
+    })
     $('#goalSubmit').click(function(e){
       e.preventDefault();
       var goal = $('#newwGoal').val();

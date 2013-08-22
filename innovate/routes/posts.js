@@ -143,3 +143,19 @@ exports.addGoal = function(req, res){
 	})
 
 }
+
+exports.removeGoal = function(req, res){
+	var id = req.session.user._id;
+	var goal = req.body.goal;
+	var goalObject = {
+		goal: goal,
+		status: "unfinished"
+	}
+	db.removeGoal(id, goalObject, function(good){
+		if(good){
+			res.send({msg: 'ok'});
+		} else{
+			res.send({msg: 'nok'});
+		}
+	})
+}

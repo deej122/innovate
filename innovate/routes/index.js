@@ -56,6 +56,7 @@ exports.profile = function(req, res){
 							members: project.members,
 							tags: project.tags,
 							link: project.youtube,
+							goals: project.goals,
 							description: project.description,
 							projImg: url,
 						}
@@ -73,6 +74,7 @@ exports.profile = function(req, res){
 							members: [],
 							tags: [],
 							link: "",//some default video about project cinta,
+							goals: [],
 							description: "Click the links above to either create a project or join one! It's what the cool kids are doing.",
 							projImg: url,
 						}

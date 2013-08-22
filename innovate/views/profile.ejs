@@ -197,45 +197,25 @@
           <span id="goal">Goals <a href="#addGoal" data-toggle="modal" id="plusGoal" class="buttonBlue">+ Add</a></span>
           <span id="achieved">Achieved</span><br><br>
           <ul id="goalsInfo">
-            <li class="goalRow first">
-              <span class="goalName">Basic design of program flyer</span>
-              <span class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></span>
-              <span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
-            </li>
-            <li class="goalRow">
-              <span class="goalName">Basic design of program flyer</span>
-              <span class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></span>
-              <span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
-            </li>
-            <li class="goalRow">
-              <span class="goalName">Basic design of program flyer</span>
-              <span class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></span>
-              <span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
-            </li>
-            <li class="goalRow">
-              <span class="goalName">Basic design of program flyer</span>
-              <span class="goalCheck"><input type="button" class="buttonCheck" value="&#10003;"></span>
-              <span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
-            </li>                                                                     
+          	<% goals.forEach(function(goal){ %>
+          		<% if(goal.status == "unfinished"){ -%>
+          			<li class = "goalRow">
+          				<span class = "goalName"> <%=goal.goal%> </span>
+          				<span class = "goalCheck"><input type = "button" class = "buttonCheck" value = "&#10003;"></span>
+          				<span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
+            		</li>
+          		<% } %>
+          	<% }); %>
           </ul>
-
           <ul id="achievedInfo">
-            <li class="achievedRow first">
-              <span class="goalName">Record pitch</span>
-              <span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
-            </li>
-            <li class="achievedRow">
-              <span class="goalName">Record pitch</span>
-              <span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
-            </li> 
-            <li class="achievedRow">
-              <span class="goalName">Record pitch</span>
-              <span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
-            </li>   
-            <li class="achievedRow">
-              <span class="goalName">Record pitch</span>
-              <span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
-            </li>                                                             
+          	<% goals.forEach(function(goal){ %>
+          		<% if(goal.status == "finished"){ %>
+          			<li class="achievedRow">
+              			<span class="goalName">goal.goal</span>
+              			<span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
+            		</li>
+          		<% } %>
+          	<%	}); %>                                               
           </ul>                      
         </div>
 

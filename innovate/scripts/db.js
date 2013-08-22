@@ -112,6 +112,13 @@ var addGoal = function(id, goalData, callback){
 	});
 }
 
+var removeGoal = function(id, goalData, callback){
+	db.projects.update({members: id}, {$pull: {goals: goalValue}}, function(e, o){
+		if(e) callback(0);
+		else callback(1);
+	})
+}
+
 exports.addUser = addUser;
 exports.getUser = getUser;
 exports.getProfile = getProfile;
@@ -123,3 +130,4 @@ exports.pushMember = pushMember;
 exports.getAll = getAll;
 exports.getProjById = getProjById;
 exports.addGoal = addGoal;
+exports.removeGoal = removeGoal;
