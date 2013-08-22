@@ -133,6 +133,7 @@ exports.addGoal = function(req, res){
 	var goalObject = {
 		goal: goal,
 		status: "unfinished",
+		id: db.goalLength
 	}
 	db.addGoal(id, goalObject, function(good){
 		if(good){

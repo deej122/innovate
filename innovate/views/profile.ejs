@@ -196,7 +196,8 @@
         <div id="progressInfo">
           <span id="goal">Goals <a href="#addGoal" data-toggle="modal" id="plusGoal" class="buttonBlue">+ Add</a></span>
           <span id="achieved">Achieved</span><br><br>
-          <ul id="goalsInfo">
+          <% if(goals != undefined){ %>
+          	<ul id="goalsInfo">
           	<% goals.forEach(function(goal){ %>
           		<% if(goal.status == "unfinished"){ -%>
           			<li class = "goalRow">
@@ -216,7 +217,14 @@
             		</li>
           		<% } %>
           	<%	}); %>                                               
-          </ul>                      
+          </ul>
+          <% } else { %>
+          	<ul id = "goalsInfo">
+          	</ul>
+          	<ul id = "achievedInfo">
+          	</ul>
+
+          <% } %>                      
         </div>
 
     </div>

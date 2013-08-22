@@ -103,6 +103,20 @@ var getAll = function(callback){
 	});
 }
 
+var goalLength = function(id){
+	db.projects.find({members: id}, function(e, o){
+		if(o.goals.length == 0){
+			return o.goals.length;
+		} else{
+			var number;
+			o.goals.forEach(function(goal){
+				number = goal.id; 
+			});
+			return number;
+		}
+	});
+}
+
 var addGoal = function(id, goalData, callback){
 	db.projects.update({members: id}, {$push: {goals: goalData}}, function(e, o){
 		if(e) callback(0);
@@ -131,3 +145,4 @@ exports.getAll = getAll;
 exports.getProjById = getProjById;
 exports.addGoal = addGoal;
 exports.removeGoal = removeGoal;
+exports.goalLength = goalLength;
