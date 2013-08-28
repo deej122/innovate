@@ -104,18 +104,23 @@ var getAll = function(callback){
 }
 
 var goalLength = function(id){
+	var number = 0;
+	function returnNumber(){
+		return number;
+	}
 	db.projects.findOne({members: id}, function(e, o){
 		if(o.goals == undefined){
-			return 0;
+			return returnNumber;
 		}
-		if(o.goals.length == 0){
-			return o.goals.length;
+		else if(o.goals.length == 0){
+			number = o.goals.length;
+			return returnNumber;
 		} else{
-			var number;
-			o.goals.forEach(function(goal){
-				number = goal.id; 
-			});
-			return number;
+			for(var i = 0; i < o.goals.length; ++i){
+				number = o.goals[i];
+			}
+			console.log(number);
+			return returnNumber;
 		}
 	});
 }
@@ -129,8 +134,8 @@ var addGoal = function(id, goalData, callback){
 	});
 }
 
-var removeGoal = function(id, goalData, callback){
-	db.projects.update({members: id}, {$pull: {goals: goalValue}}, function(e, o){
+var removeGoal = function(id, goalId, callback){
+	db.projects.update({members: id}, {$pull: {goals: {id: goalId}}}, function(e, o){
 		if(e) callback(0);
 		else callback(1);
 	})

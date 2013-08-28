@@ -130,16 +130,15 @@ exports.getProjectById = function(req, res){
 exports.addGoal = function(req, res){
 	var id = req.session.user._id;
 	var goal = req.body.goal;
-	var number = db.goalLength(id);
-	console.log(number);
+	var number = new ObjectID();
 	var goalObject = {
 		goal: goal,
 		status: "unfinished",
-		id: db.goalLength
+		id: number.valueOf().toString()
 	}
 	db.addGoal(id, goalObject, function(good){
 		if(good){
-			res.send({msg: "ok"});
+			res.send({msg: "ok", goalID: number.valueOf().toString()});
 		} else{
 			res.send({msg: "nok"});
 		}
@@ -149,14 +148,10 @@ exports.addGoal = function(req, res){
 
 exports.removeGoal = function(req, res){
 	var id = req.session.user._id;
-	var goal = req.body.goal;
-	var goalObject = {
-		goal: goal,
-		status: "unfinished"
-	}
-	db.removeGoal(id, goalObject, function(good){
+	var goalId = req.body.id;
+	db.removeGoal(id, goalId, function(good){
 		if(good){
-			res.send({msg: 'ok'});
+			res.send({msg: 'ok', id: goalId});
 		} else{
 			res.send({msg: 'nok'});
 		}

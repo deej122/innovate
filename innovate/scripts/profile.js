@@ -20,8 +20,21 @@
       alert("hello!");
     });
     $(document).on('click', '.goalEx', function(){
-      alert("hello!");
-    })
+      alert("exhello!");
+      var goalId = $(this).attr('data-id');
+      $.ajax({
+        url: '/removeGoal',
+        type: 'POST',
+        cache: false,
+        data: {id: goalId},
+        success: function(data){
+          if(data.msg == 'ok'){
+            $('li#'+data.id).remove();
+          }
+          //remove from the list element
+        }
+      }) 
+    });
     $('#goalSubmit').click(function(e){
       e.preventDefault();
       var goal = $('#newwGoal').val();
@@ -35,9 +48,9 @@
           //do the adding goals here erghnuggets visually
           if(data.msg == 'ok'){
             //do the stuff with the data.msg
-            html = '<li class = "goalRow"><span class = "goalName">'+goal+'</span>';
+            html = '<li class = "goalRow" id = '+data.goalID+' ><span class = "goalName">'+goal+'</span>';
             html += '<span class = "goalCheck"><input type = "button" class = "buttonCheck" value = "&#10003;"></span>';
-            html += '<span class = "goalEx"><input type = "button" class = "buttonEx" value = "&#10007;"></span></li>';
+            html += '<span class = "goalEx" data-id = '+data.goalID+' ><input type = "button" class = "buttonEx" value = "&#10007;"></span></li>';
             $('#goalsInfo').append(html);
             $('#newwGoal').val("");
             $('#addGoal').modal('hide');

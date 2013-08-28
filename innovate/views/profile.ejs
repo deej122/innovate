@@ -200,10 +200,10 @@
           	<ul id="goalsInfo">
           	<% goals.forEach(function(goal){ %>
           		<% if(goal.status == "unfinished"){ -%>
-          			<li class = "goalRow">
+          			<li class = "goalRow" id="<%=goal.id%>">
           				<span class = "goalName"> <%=goal.goal%> </span>
           				<span class = "goalCheck"><input type = "button" class = "buttonCheck" value = "&#10003;"></span>
-          				<span class="goalEx"><input type="button" class="buttonEx" value="&#10007;"></span>
+          				<span class="goalEx" data-id = "<%=goal.id%>"><input type="button" class="buttonEx" value="&#10007;"></span>
             		</li>
           		<% } %>
           	<% }); %>
