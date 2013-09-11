@@ -1,8 +1,63 @@
 html{
     background: #FFFFFF no-repeat center bottom fixed;
-    background-color: rgba(0,0,0,.7);
+  /*  background-image: url('tem_home_BG3.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+*/
+
+    /*background-color: rgba(0,0,0,.7);*/
 }
 
+#cinta_stuff{
+	text-align: center;
+	margin: auto;
+	margin-top: -50px;
+}
+
+#cinta_label{
+	font-size: 70px;
+    font-family: 'Cedarville Cursive', cursive;  	
+}
+
+#cinta_desc{
+	line-height: 40px;
+	margin: auto;
+	margin-top: -40px;
+	font-size: 30px;
+	width: 50%;
+}
+
+#access_form{
+	text-align: center;
+	margin: auto;
+}
+
+#access_button{
+	margin: auto;
+}
+
+#contact{
+	text-align: center;
+	margin: auto;
+}
+
+.contactLink{
+	width: 20%;
+	text-decoration: none;
+	color: #0084B4;
+}
+
+.contactLink:hover{
+	text-decoration: underline;
+}
+
+.contactLink:focus{
+	outline: none;
+	text-decoration: underline;
+}
+/*
 #skip{
 	float: right;
 	margin-right: 2%;
@@ -47,3 +102,6 @@ html{
 	padding: 5px;
 	display: none;
 }
+
+*/
+
