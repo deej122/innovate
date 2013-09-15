@@ -26,7 +26,6 @@
 }
 
 
-/*Start from HERE when continuing mobilizing*/
 @media only screen and (min-width: 720px) and (max-width: 960px) {
     
     body {
@@ -47,16 +46,19 @@
     }
 
     .nav_list{
-        margin-left: 20%;
+
         width: 30%;
         border-bottom: groove 1px rgba(0,0,0,.3);
     }
 
     .nav_list li{
-        widows: 30%;
         display: inline-block;
         border-bottom: none;
     }
+
+    #content{
+        margin-left: 50px;
+    }    
 
     #commonTags{
         display: none;
@@ -64,145 +66,45 @@
 
 }
 
+/*Start from HERE when continuing mobilizing*/
 @media only screen and (min-width: 480px) and (max-width: 719px) {
 
     body {
         min-width:480px;
     }
 
+    #top{
+        width: 60%;
+    }
+
     #name{
-    margin: auto;
-    margin-top: 30px;
-    font-size: 40px;
-    width: 100%;
-    text-align: center;
-    height: 30px;
-    border-right:none;
-}
-
-#tag{
-    margin-top: -30px;
-    font-size: 10px;
-}
-
-#meContainer{
-    margin-left: 37%;
-}
-
-#mePic{
-    width: 40px;
-    height: 40px;
-    border: 5px solid rgba(238, 154, 0, .7);    
-}     
-    
-      .nav{
-        width: 100%;
-        border: none;
-        height: 20px;
-        text-align: center;
-    }
-
-    .nav li{
-        display: inline-block;
-        font-size: 12px;
-    }
-
-    #whatsInside{
-        width: 100%;
+        font-size: 40px;
         margin-left: 0px;
-        margin-top: 30px;
     }
 
-#abtContent{
-    float: left;
-    margin-left: 60px;
-    width: 90%;
-    margin-top: -20px;
-}
+    #newProject{
+        margin-left: 80%;
+    }
 
-.big{
-    font-size: 15px;
-    text-align: left;
-}
+    .nav_list{
 
-.small{
-    font-size: 10px;
-    text-align: left;
-}
+        width: 30%;
+        border-bottom: groove 1px rgba(0,0,0,.3);
+    }
 
-.stuffWrap{
-    height: 90px;
-    width: 90%;
-    margin-left: 40px;    
-}
+    .nav_list li{
+        display: inline-block;
+        border-bottom: none;
+    }
 
-.stuffImg{
-    display: none;       
-}
+    #content{
+        margin-left: 50px;
+    }    
 
-.desc{
-    width: 90%;
-    float: left;
-    text-align: left;
-    margin-top: -20px;
-    vertical-align: top;
-}
+    #commonTags{
+        display: none;
+    }
 
-.desc h3{
-    font-size: 14px;
-}
-
-.descBig{
-    font-size: 12px;
-}
-
-.descSmall{
-    font-size: 10px;
-}
-
-
-#con{
-    width: 70%;
-    float: left;
-    margin-left: 40px;
-}
-
-.text{
-    font-size: 8px;
-}
-
-#con li{
-    height: 24.5px;
-}
-
-.lab{
-    float: left;
-    text-align: left;
-    width: 20%;
-    margin-left: 2%;
-    margin-right: 15%;
-    font-size: 15px;
-}
-
-#fbDiv{
-    display: none;
-}
-
-#twitDiv{
-    display: none;
-}
-
-#linDiv{
-    display: none;
-}
-
-#emlA{
-    line-height: 24.5px;
-}
-
-.foot{
-    font-size: 8px;
-}
 
 }
 
