@@ -33,6 +33,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/view', routes.view);
 app.get('/', routes.index);
 app.get('/home', routes.home);
 app.get('/create', routes.create);

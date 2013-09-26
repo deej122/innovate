@@ -110,3 +110,11 @@ exports.logout = function(req, res){
 	req.session.destroy();
 	res.redirect('/home');
 }
+
+exports.view = function(req, res){
+	if(req.session.user == null){
+		res.redirect('/');
+	} else {
+		res.render('profileView', {title: "Create a Campaign"});
+	}
+};
