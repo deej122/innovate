@@ -157,3 +157,15 @@ exports.removeGoal = function(req, res){
 		}
 	})
 }
+
+exports.access = function(req, res){
+	var code = req.body.code;
+	db.findSchool(1, code, function(good){
+		if(good){
+			req.session.access = "granted";
+			res.send({msg: 'ok', redirect: '/home'});
+		} else{
+			res.send({msg: 'nok'})
+		}
+	})
+}

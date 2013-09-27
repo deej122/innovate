@@ -1,4 +1,4 @@
-var db = require('mongojs').connect('innovate', ["users", "profiles", "projects"]);
+var db = require('mongojs').connect('innovate', ["users", "profiles", "projects", "schools", "codes"]);
 var bcrypt = require('bcrypt-nodejs');
 var env = process.env.NODE_ENV || 'development';
 
@@ -138,9 +138,33 @@ var removeGoal = function(id, goalId, callback){
 	db.projects.update({members: id}, {$pull: {goals: {id: goalId}}}, function(e, o){
 		if(e) callback(0);
 		else callback(1);
-	})
+	});
 }
 
+var finishGoal = function(id, goalId, callback){
+	db.projects.update({members: id}, {$set: {goals: {id: goalID}}})
+}
+
+var findSchool = function(id, schoolId, callback){
+	db.codes.findOne({_id: id}, function(e, o){
+		if(o){
+			console.log(o);
+			var flag = false;
+			o.codes.forEach(function(code){
+				if(code == schoolId){
+					flag = true;
+				}
+			});
+			if(flag){
+				callback(1);
+			} else{
+				callback(0);
+			}
+		} else{
+			callback(0);
+		}
+	});
+}
 exports.addUser = addUser;
 exports.getUser = getUser;
 exports.getProfile = getProfile;
@@ -154,3 +178,4 @@ exports.getProjById = getProjById;
 exports.addGoal = addGoal;
 exports.removeGoal = removeGoal;
 exports.goalLength = goalLength;
+exports.findSchool = findSchool;

@@ -1,8 +1,3 @@
-
-/**
- * Module dependencies.
- */
-
 var express = require('express')
   , routes = require('./routes')
   , posts = require('./routes/posts')
@@ -51,6 +46,7 @@ app.post('/new', posts.addProject);
 app.post('/displayProject', posts.getProjectById);
 app.post('/addGoal', posts.addGoal);
 app.post('/removeGoal', posts.removeGoal);
+app.post('/access', posts.access);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

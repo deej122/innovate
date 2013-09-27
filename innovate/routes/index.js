@@ -15,7 +15,11 @@ exports.index = function(req, res){
 };
 
 exports.home = function(req, res){
-	if(req.session.user != null){
+	console.log(req.session);
+	if(req.session.access != "granted"){
+		res.redirect('/');
+	}
+	else if(req.session.user != null){
 		res.redirect('/profile');
 	} else {
 		res.render('home', {title: 'Home'});
@@ -23,7 +27,10 @@ exports.home = function(req, res){
 };
 
 exports.create = function(req, res){
-	if(req.session.user == null){
+	if(req.session.access != "granted"){
+		res.redirect('/');
+	}
+	else if(req.session.user == null){
 		res.redirect('/home');
 	} else {
 		db.getProfile(req.session.user, function(good){
@@ -37,7 +44,10 @@ exports.create = function(req, res){
 };
 
 exports.profile = function(req, res){
-	if(req.session.user == null){
+	if(req.session.access != "granted"){
+		res.redirect('/');
+	}
+	else if(req.session.user == null){
 		res.redirect('/home');
 	} else{
 		db.getProfile(req.session.user, function(good, profile){
@@ -89,8 +99,11 @@ exports.profile = function(req, res){
 };
 
 exports.new = function(req, res){
-	if(req.session.user == null){
+	if(req.session.access != "granted"){
 		res.redirect('/');
+	}
+	else if(req.session.user == null){
+		res.redirect('/home');
 	} else {
 		res.render('new', {title: "Create a Campaign"});
 	}
@@ -112,7 +125,10 @@ exports.logout = function(req, res){
 }
 
 exports.view = function(req, res){
-	if(req.session.user == null){
+	if(req.session.access != "granted"){
+		res.redirect('/');
+	}
+	else if(req.session.user == null){
 		res.redirect('/');
 	} else {
 		res.render('profileView', {title: "Create a Campaign"});

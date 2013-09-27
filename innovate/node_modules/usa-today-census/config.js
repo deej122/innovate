@@ -1,0 +1,1 @@
+exports.usaKey = ''; //enter your USAToday key here
