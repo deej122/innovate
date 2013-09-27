@@ -12,6 +12,7 @@ $(document).ready(function(){
 					window.location = data.redirect;
 				} else{
 					alert("That is not a recognized code. Try again!");
+					$('#access_code').val('');
 				}
 			}
 		})

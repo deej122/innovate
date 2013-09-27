@@ -148,7 +148,6 @@ var finishGoal = function(id, goalId, callback){
 var findSchool = function(id, schoolId, callback){
 	db.codes.findOne({_id: id}, function(e, o){
 		if(o){
-			console.log(o);
 			var flag = false;
 			o.codes.forEach(function(code){
 				if(code == schoolId){

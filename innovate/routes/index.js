@@ -7,7 +7,10 @@ var db = require('../scripts/db.js');
 var s3 = require('../scripts/s3.js');
 
 exports.index = function(req, res){
-  if(req.session.user != null){
+  if(req.session.access == "granted"){
+  	res.redirect('/home');
+  }
+  else if(req.session.user != null){
   	res.redirect('/profile');
   } else {
   	res.render('landing', { title: 'innovate' });
@@ -15,7 +18,6 @@ exports.index = function(req, res){
 };
 
 exports.home = function(req, res){
-	console.log(req.session);
 	if(req.session.access != "granted"){
 		res.redirect('/');
 	}
