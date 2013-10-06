@@ -46,6 +46,7 @@ app.post('/new', posts.addProject);
 app.post('/displayProject', posts.getProjectById);
 app.post('/addGoal', posts.addGoal);
 app.post('/removeGoal', posts.removeGoal);
+app.post('/finishGoal', posts.finishGoal);
 app.post('/access', posts.access);
 
 http.createServer(app).listen(app.get('port'), function(){

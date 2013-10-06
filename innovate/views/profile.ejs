@@ -203,8 +203,8 @@
           		<% if(goal.status == "unfinished"){ -%>
           			<li class = "goalRow" id="<%=goal.id%>">
           				<span class = "goalName"> <%=goal.goal%> </span>
-          				<span class = "goalCheck"><input type = "button" class = "buttonCheck" value = "&#10003;"></span>
-          				<span class="goalEx" data-id = "<%=goal.id%>"><input type="button" class="buttonEx" value="&#10007;"></span>
+          				<span class = "goalCheck" data-value = "<%=goal.goal%>" data-id = "<%=goal.id%>"><input type = "button" class = "buttonCheck" value = "&#10003;"></span>
+          				<span class="goalEx" data-value = "<%=goal.goal%>" data-id = "<%=goal.id%>"><input type="button" class="buttonEx" value="&#10007;"></span>
             		</li>
           		<% } %>
           	<% }); %>
@@ -213,7 +213,7 @@
           	<% goals.forEach(function(goal){ %>
           		<% if(goal.status == "finished"){ %>
           			<li class="achievedRow">
-              			<span class="goalName">goal.goal</span>
+              			<span class="goalName"><%=goal.goal%></span>
               			<span class="achievedBack"><input type="button" class="buttonBack" value="&#8617;"></span>
             		</li>
           		<% } %>
@@ -224,7 +224,6 @@
           	</ul>
           	<ul id = "achievedInfo">
           	</ul>
-
           <% } %>                      
         </div>
 

@@ -14,9 +14,9 @@ var addUser = function(userObject, callback){
 					db.users.save(userObject);
 					callback(1);
 				});
-			})
+			});
 		}
-	})
+	});
 }
 
 var getUser = function(email, password, callback){
@@ -141,8 +141,16 @@ var removeGoal = function(id, goalId, callback){
 	});
 }
 
-var finishGoal = function(id, goalId, callback){
-	db.projects.update({members: id}, {$set: {goals: {id: goalID}}})
+var finishGoal = function(id, goalId, goalData, callback){
+	removeGoal(id, goalId, function(good){
+		console.log("This is the remove goal of:" , good);
+		if(good){
+			addGoal(id, goalData, function(great){
+				if(great) callback(1);
+				else callback(0);
+			})
+		}
+	})
 }
 
 var findSchool = function(id, schoolId, callback){
@@ -178,3 +186,4 @@ exports.addGoal = addGoal;
 exports.removeGoal = removeGoal;
 exports.goalLength = goalLength;
 exports.findSchool = findSchool;
+exports.finishGoal = finishGoal;

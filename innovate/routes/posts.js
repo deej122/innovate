@@ -158,6 +158,27 @@ exports.removeGoal = function(req, res){
 	})
 }
 
+exports.finishGoal = function(req, res){
+	console.log("post being called...");
+	var id = req.session.user._id;
+	var goalId = req.body.id;
+	var value = req.body.value;
+	console.log("The goal to be finished is: ", value);
+	var number = new ObjectID();
+	var goalObject = {
+		goal: value,
+		status: "finished",
+		id: number.valueOf().toString()
+	}
+	db.finishGoal(id, goalId, goalObject, function(good){
+		if(good){
+			res.send({msg: 'ok', goalID: number.valueOf().toString()});
+		} else{
+			res.send({msg: 'nok'});
+		}
+	})
+}
+
 exports.access = function(req, res){
 	var code = req.body.code;
 	db.findSchool(1, code, function(good){
