@@ -25,4 +25,20 @@ $(document).ready(function(){
 			}
 		});
 	});
+	$('.join').click(function(){
+		var id = $(this).attr('data-id');
+		alert(id);
+		$.ajax({
+			url:'/joinProject',
+			type: 'POST',
+			cache: false,
+			data: {id: id},
+			success : function(data){
+				//be successful
+				if(typeof(data.redirect == 'string')){
+					window.location = data.redirect;
+				}
+			}
+		})
+	});
 });

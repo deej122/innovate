@@ -48,6 +48,7 @@ app.post('/addGoal', posts.addGoal);
 app.post('/removeGoal', posts.removeGoal);
 app.post('/finishGoal', posts.finishGoal);
 app.post('/access', posts.access);
+app.post('/joinProject', posts.joinProject);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -56,7 +56,7 @@
                   <p data-id = "<%=pitch._id%>" class = "projectName"> <%= pitch.name %> </p>
                 </div><br><br>
                 <iframe width="300" height = "200" src="<%=pitch.youtube%>" frameborder = "5" allowfullscreen></iframe><br>
-                <input type = "submit" class = "buttonBlue request" value = "Join Project">
+                <input type = "submit" data-id = "<%=pitch._id%>"class = "buttonBlue request join" value = "Join Project">
             <% } else{ %>
                 <tr class = "pitchRow">
                 <td class = "thePitch">
@@ -65,7 +65,7 @@
                 </div>
                 <iframe width="300" height = "200" src="<%=pitch.youtube%>" frameborder = "5" allowfullscreen></iframe>
                 <br>
-                <input type = "submit" class = "buttonBlue request" value = "Join Project">
+                <input type = "submit" data-id = "<%=pitch._id%>"class = "buttonBlue request join" value = "Join Project">
                 </td>
             <% counter = 0;}       %>
             <% ++ counter; %>

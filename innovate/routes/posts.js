@@ -106,6 +106,20 @@ exports.getProject = function(req, res){
 	})
 }
 
+exports.joinProject = function(req, res){
+	console.log("The post is happenning...");
+	var projId = req.body.id;
+	var id = req.session.user._id;
+	db.pullMember(req.session.user, function(fantastic){
+		if(fantastic){
+			db.joinProject(projId, id, function(good){
+				if(good) res.send({redirect: '/profile'});				
+				else console.log('there was an error.');
+			})
+		}
+	})
+}
+
 exports.getProjectById = function(req, res){
 	var id = req.body.id;
 	db.getProjById(id, function(good, project){

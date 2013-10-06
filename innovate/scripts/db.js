@@ -93,7 +93,7 @@ var pullMember = function(userObject, callback){
 }
 
 var pushMember = function(userObject, callback){
-	
+		
 }
 
 var getAll = function(callback){
@@ -172,12 +172,21 @@ var findSchool = function(id, schoolId, callback){
 		}
 	});
 }
+
+var joinProject = function(id, email, callback){
+	db.projects.update({_id: id}, {$push: {members: email}}, function(e, o){
+		if(!e) callback(1);
+		else callback(0);
+	})
+}
+
 exports.addUser = addUser;
 exports.getUser = getUser;
 exports.getProfile = getProfile;
 exports.addProfile = addProfile;
 exports.addProject = addProject;
 exports.getProject = getProject;
+exports.joinProject = joinProject;
 exports.pullMember = pullMember;
 exports.pushMember = pushMember;
 exports.getAll = getAll;
