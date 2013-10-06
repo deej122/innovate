@@ -112,13 +112,20 @@ exports.new = function(req, res){
 };
 
 exports.pitches = function(req, res){
-	db.getAll(function(good, pitches){
-		if(good){
-			res.render('pitches', {title: "Pitch You!", pitches: pitches});
-		} else{
-			res.send('not ok, refresh.');
-		}
-	})
+	if(req.session.access != "granted"){
+		res.redirect('/');
+	}
+	else if(req.session.user == null){
+		res.redirect('/home');
+	} else{
+		db.getAll(function(good, pitches){
+			if(good){
+				res.render('pitches', {title: "Pitch You!", pitches: pitches});
+			} else{
+				res.send('not ok, refresh.');
+			}
+		})
+	}
 };
 
 exports.logout = function(req, res){
