@@ -174,6 +174,7 @@ var findSchool = function(id, schoolId, callback){
 }
 
 var joinProject = function(id, email, callback){
+	
 	db.projects.update({_id: id}, {$push: {members: email}}, function(e, o){
 		if(!e) callback(1);
 		else callback(0);
