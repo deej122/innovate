@@ -1,5 +1,0 @@
-
-stream.js:94
-      throw er; // Unhandled stream error in pipe.
-            ^
-Error: ENOENT, open '/logs/out.log'
