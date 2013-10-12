@@ -8,10 +8,7 @@ var child = new(forever.Monitor)('app.js',{
 	watchIgnoreDotFiles: null,
 	watchIgnorePatterns: null,
 	watchDirectory: __dirname,
-	options: [], //watch = true?,
-	logFile: '/logs/log.out',
-	outFile: '/logs/out.log',
-	errFile: '/logs/err.log'
+	options: [] //watch = true?,
 });
 
 child.on('exit', function(){
