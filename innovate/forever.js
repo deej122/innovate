@@ -9,9 +9,9 @@ var child = new(forever.Monitor)('app.js',{
 	watchIgnorePatterns: null,
 	watchDirectory: __dirname,
 	options: [], //watch = true?,
-	logFile: '~/home/ubuntu/innovate/innovate/logs/log.out',
-	outFile: '~/home/ubuntu/innovate/innovate/logs/out.log',
-	errFile: '~/home/ubuntu/innovate/innovate/logs/err.log'
+	logFile: './logs/log.out',
+	outFile: './logs/out.log',
+	errFile: './logs/err.log'
 });
 
 child.on('exit', function(){
