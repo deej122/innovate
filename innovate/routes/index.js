@@ -18,6 +18,7 @@ exports.index = function(req, res){
 };
 
 exports.home = function(req, res){
+	console.log(req.session);
 	if(req.session.access != "granted"){
 		res.redirect('/');
 	}
