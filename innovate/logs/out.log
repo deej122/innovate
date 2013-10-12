@@ -12,3 +12,105 @@ Express server listening on port 3000
 Express server listening on port 3000
 Express server listening on port 3000
 Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+[90mGET / [36m304 [90m20ms[0m
+[90mGET /common.css [36m304 [90m5ms[0m
+[90mGET /landing.css [36m304 [90m3ms[0m
+[90mGET /landing.js [36m304 [90m3ms[0m
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m26ms - 40b[0m
+{ cookie: 
+   { path: '/',
+     _expires: null,
+     originalMaxAge: null,
+     httpOnly: true },
+  access: 'granted' }
+[90mGET /home [36m304 [90m10ms[0m
+[90mGET /home.css [36m304 [90m3ms[0m
+[90mGET /common.css [36m304 [90m1ms[0m
+[90mGET /modals.css [36m304 [90m1ms[0m
+[90mGET /home.js [36m304 [90m1ms[0m
+[90mGET /modals.js [36m304 [90m2ms[0m
+[90mGET /tem_home_BG.jpg [36m304 [90m1ms[0m
+[90mPOST /login [32m200 [90m270ms - 43b[0m
+[90mGET /profile [32m200 [90m15ms - 12.23kb[0m
+[90mGET /common.css [36m304 [90m10ms[0m
+[90mGET /profile.css [36m304 [90m9ms[0m
+[90mGET /modals.css [36m304 [90m8ms[0m
+[90mGET /mobilize.css [36m304 [90m6ms[0m
+[90mGET /toastr.css [36m304 [90m4ms[0m
+[90mGET /profile.js [36m304 [90m6ms[0m
+[90mGET /modals.js [36m304 [90m5ms[0m
+[90mGET /toastr.js [36m304 [90m3ms[0m
+[90mGET /grayLightBulb.png [36m304 [90m4ms[0m
+Express server listening on port 3000
+[90mGET /logout [36m302 [90m7ms - 66b[0m
+{ cookie: 
+   { path: '/',
+     _expires: null,
+     originalMaxAge: null,
+     httpOnly: true } }
+[90mGET /home [36m302 [90m3ms - 58b[0m
+[90mGET / [36m304 [90m8ms[0m
+[90mGET /common.css [36m304 [90m3ms[0m
+[90mGET /landing.css [36m304 [90m1ms[0m
+[90mGET /landing.js [36m304 [90m2ms[0m
+Express server listening on port 3000
