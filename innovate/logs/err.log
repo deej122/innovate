@@ -1,0 +1,11 @@
+TypeError: Cannot read property '_id' of undefined
+    at exports.addProfile (/home/deepak/Documents/innovate/innovate/routes/posts.js:40:31)
+    at callbacks (/home/deepak/Documents/innovate/innovate/node_modules/express/lib/router/index.js:161:37)
+    at param (/home/deepak/Documents/innovate/innovate/node_modules/express/lib/router/index.js:135:11)
+    at pass (/home/deepak/Documents/innovate/innovate/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/home/deepak/Documents/innovate/innovate/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/home/deepak/Documents/innovate/innovate/node_modules/express/lib/router/index.js:33:10)
+    at next (/home/deepak/Documents/innovate/innovate/node_modules/express/node_modules/connect/lib/proto.js:190:15)
+    at next (/home/deepak/Documents/innovate/innovate/node_modules/express/node_modules/connect/lib/middleware/session.js:313:9)
+    at /home/deepak/Documents/innovate/innovate/node_modules/express/node_modules/connect/lib/middleware/session.js:330:9
+    at /home/deepak/Documents/innovate/innovate/node_modules/express/node_modules/connect/lib/middleware/session/memory.js:55:7
