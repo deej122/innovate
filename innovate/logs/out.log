@@ -1,7 +1,206 @@
 Express server listening on port 3000
+<<<<<<< HEAD
+[90mGET / [32m200 [90m16ms - 2kb[0m
+[90mGET /landing.css [32m200 [90m11ms - 1.44kb[0m
+[90mGET /common.css [32m200 [90m8ms - 3.98kb[0m
+[90mGET /landing.js [32m200 [90m3ms - 446b[0m
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+[90mGET / [32m200 [90m16ms - 2kb[0m
+[90mGET /common.css [32m200 [90m8ms - 3.98kb[0m
+[90mGET /landing.css [32m200 [90m2ms - 1.44kb[0m
+[90mGET /landing.js [32m200 [90m2ms - 446b[0m
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m35ms - 40b[0m
+[90mGET /home [32m200 [90m13ms - 3.71kb[0m
+[90mGET /home.css [32m200 [90m6ms - 1.44kb[0m
+[90mGET /common.css [36m304 [90m3ms[0m
+[90mGET /modals.css [32m200 [90m4ms - 4.82kb[0m
+[90mGET /home.js [32m200 [90m1ms - 3.49kb[0m
+[90mGET /modals.js [32m200 [90m2ms - 8.22kb[0m
+[90mGET /tem_home_BG.jpg [32m200 [90m552ms - 150.67kb[0m
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m35ms - 40b[0m
+[90mGET /home [32m200 [90m13ms - 3.71kb[0m
+[90mGET /home.css [32m200 [90m6ms - 1.44kb[0m
+[90mGET /common.css [36m304 [90m2ms[0m
+[90mGET /modals.css [32m200 [90m1ms - 4.82kb[0m
+[90mGET /home.js [32m200 [90m2ms - 3.49kb[0m
+[90mGET /modals.js [32m200 [90m3ms - 8.22kb[0m
+[90mGET /tem_home_BG.jpg [32m200 [90m424ms - 150.67kb[0m
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+[90mPOST /signup [32m200 [90m367ms - 42b[0m
+[90mGET /create [36m302 [90m4ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+[90mPOST /signup [32m200 [90m324ms - 42b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /create [36m302 [90m0ms - 58b[0m
+[90mGET /profile [36m302 [90m0ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m0ms - 58b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET / [36m302 [90m0ms - 72b[0m
+[90mGET /profile [36m302 [90m11ms - 58b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m3ms - 72b[0m
+Express server listening on port 3000
+[90mGET /profile [36m302 [90m10ms - 58b[0m
+[90mGET / [32m200 [90m14ms - 2kb[0m
+[90mGET / [32m200 [90m6ms - 2kb[0m
+=======
 [90mGET / [36m304 [90m13ms[0m
+>>>>>>> e53c07f61af027ca496f62ce72b9bf62a4a75259
 [90mGET /common.css [36m304 [90m5ms[0m
+[90mGET /landing.css [36m304 [90m2ms[0m
+[90mGET /landing.js [36m304 [90m3ms[0m
+[90mGET /common.css [36m304 [90m2ms[0m
 [90mGET /landing.css [36m304 [90m3ms[0m
+[90mGET /landing.js [36m304 [90m2ms[0m
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m35ms - 40b[0m
+[90mGET /home [36m304 [90m16ms[0m
+[90mGET /home.css [36m304 [90m5ms[0m
+[90mGET /common.css [36m304 [90m2ms[0m
+[90mGET /modals.css [36m304 [90m1ms[0m
+[90mGET /modals.js [36m304 [90m2ms[0m
+[90mGET /home.js [36m304 [90m2ms[0m
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m36ms - 40b[0m
+[90mGET /home [36m304 [90m12ms[0m
+[90mGET /home.css [36m304 [90m4ms[0m
+[90mGET /common.css [36m304 [90m1ms[0m
+[90mGET /modals.css [36m304 [90m1ms[0m
+[90mGET /home.js [36m304 [90m1ms[0m
+[90mGET /modals.js [36m304 [90m1ms[0m
+[90mGET /tem_home_BG.jpg [36m304 [90m2ms[0m
+Express server listening on port 3000
+[90mPOST /login [32m200 [90m361ms - 43b[0m
+[90mGET /profile [36m302 [90m4ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mPOST /login [32m200 [90m334ms - 43b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m0ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m5ms - 72b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+Express server listening on port 3000
+[90mGET / [32m200 [90m19ms - 2kb[0m
+[90mGET /common.css [36m304 [90m6ms[0m
+[90mGET /landing.css [36m304 [90m2ms[0m
+[90mGET /landing.js [36m304 [90m1ms[0m
+Express server listening on port 3000
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m38ms - 40b[0m
+[90mGET /home [36m304 [90m13ms[0m
+[90mGET /home.css [36m304 [90m3ms[0m
+[90mGET /common.css [36m304 [90m1ms[0m
+[90mGET /modals.css [36m304 [90m0ms[0m
+[90mGET /home.js [36m304 [90m2ms[0m
+[90mGET /modals.js [36m304 [90m1ms[0m
+[90mGET /tem_home_BG.jpg [36m304 [90m2ms[0m
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+[90mPOST /login [32m200 [90m358ms - 43b[0m
+[90mGET /profile [36m302 [90m4ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m0ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m0ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m0ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+Express server listening on port 3000
+[90mGET /profile [36m302 [90m9ms - 58b[0m
+[90mGET / [32m200 [90m12ms - 2kb[0m
+[90mGET /common.css [36m304 [90m4ms[0m
+[90mGET /landing.css [36m304 [90m1ms[0m
+[90mGET /landing.js [36m304 [90m1ms[0m
+[90mPOST /access [32m200 [90m186ms - 40b[0m
+[90mPOST /access [32m200 [90m9ms - 40b[0m
+[90mGET /home [36m304 [90m11ms[0m
+Express server listening on port 3000
+Express server listening on port 3000
+[90mGET /home [36m302 [90m8ms - 58b[0m
+[90mGET / [36m304 [90m14ms[0m
+[90mGET /common.css [36m304 [90m5ms[0m
+[90mGET /landing.css [36m304 [90m1ms[0m
+[90mGET /landing.js [36m304 [90m3ms[0m
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m35ms - 40b[0m
+[90mGET /home [32m200 [90m13ms - 3.71kb[0m
+[90mGET /home.css [36m304 [90m4ms[0m
+[90mGET /modals.css [36m304 [90m2ms[0m
+[90mGET /common.css [36m304 [90m3ms[0m
+[90mGET /home.js [36m304 [90m4ms[0m
+[90mGET /modals.js [36m304 [90m1ms[0m
+[90mGET /tem_home_BG.jpg [36m304 [90m2ms[0m
+Express server listening on port 3000
+[90mPOST /login [32m200 [90m369ms - 43b[0m
+[90mGET /profile [36m302 [90m5ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m0ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m0ms - 72b[0m
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+[90mGET / [32m200 [90m22ms - 2kb[0m
+[90mGET /common.css [36m304 [90m6ms[0m
+[90mGET /landing.css [36m304 [90m1ms[0m
 [90mGET /landing.js [36m304 [90m3ms[0m
 [90mPOST /access [32m200 [90m21ms - 40b[0m
 [90mGET /home [36m304 [90m12ms[0m
@@ -23,6 +222,160 @@ Express server listening on port 3000
 [90mGET /create.js [36m304 [90m4ms[0m
 [90mGET /modals.js [36m304 [90m3ms[0m
 [90mGET /logo.png [36m304 [90m3ms[0m
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m34ms - 40b[0m
+[90mGET /home [36m304 [90m12ms[0m
+[90mGET /home.css [36m304 [90m4ms[0m
+[90mGET /common.css [36m304 [90m1ms[0m
+[90mGET /modals.css [36m304 [90m1ms[0m
+[90mGET /home.js [36m304 [90m2ms[0m
+[90mGET /modals.js [36m304 [90m2ms[0m
+Express server listening on port 3000
+[90mPOST /login [32m200 [90m356ms - 43b[0m
+[90mGET /profile [36m302 [90m3ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+[90mGET / [36m302 [90m0ms - 72b[0m
+[90mGET /profile [36m302 [90m0ms - 58b[0m
+[90mGET / [36m302 [90m0ms - 72b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m0ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m5ms - 72b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m0ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+Express server listening on port 3000
+[90mGET /profile [36m302 [90m8ms - 58b[0m
+[90mGET / [32m200 [90m11ms - 2kb[0m
+[90mGET /common.css [36m304 [90m4ms[0m
+[90mGET /landing.css [36m304 [90m1ms[0m
+[90mGET /landing.js [36m304 [90m1ms[0m
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m36ms - 40b[0m
+[90mGET /home [36m304 [90m12ms[0m
+[90mGET /home.css [36m304 [90m4ms[0m
+[90mGET /common.css [36m304 [90m2ms[0m
+[90mGET /modals.css [36m304 [90m0ms[0m
+[90mGET /home.js [36m304 [90m2ms[0m
+[90mGET /modals.js [36m304 [90m1ms[0m
+Express server listening on port 3000
+Express server listening on port 3000
+[90mPOST /signup [32m200 [90m372ms - 42b[0m
+[90mGET /create [36m302 [90m4ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+[90mGET / [36m302 [90m5ms - 72b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+Express server listening on port 3000
+[90mGET / [32m200 [90m18ms - 2kb[0m
+[90mGET /common.css [36m304 [90m5ms[0m
+[90mGET /landing.css [36m304 [90m2ms[0m
+[90mGET /landing.js [36m304 [90m2ms[0m
+Express server listening on port 3000
+[90mPOST /access [32m200 [90m38ms - 40b[0m
+[90mGET /home [36m304 [90m13ms[0m
+[90mGET /home.css [36m304 [90m4ms[0m
+[90mGET /common.css [36m304 [90m2ms[0m
+[90mGET /modals.css [36m304 [90m1ms[0m
+[90mGET /home.js [36m304 [90m3ms[0m
+[90mGET /modals.js [36m304 [90m4ms[0m
+Express server listening on port 3000
+Express server listening on port 3000
+[90mPOST /signup [32m200 [90m363ms - 42b[0m
+[90mGET /create [36m302 [90m3ms - 58b[0m
+[90mGET / [36m302 [90m2ms - 72b[0m
+[90mGET /profile [36m302 [90m2ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m0ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m0ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m6ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m3ms - 58b[0m
+[90mGET / [36m302 [90m1ms - 72b[0m
+[90mGET /profile [36m302 [90m1ms - 58b[0m
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
 Express server listening on port 3000
 Express server listening on port 3000
 Express server listening on port 3000
