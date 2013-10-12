@@ -1,14 +1,37 @@
 Express server listening on port 3000
-[90mGET / [36m304 [90m17ms[0m
+[90mGET / [36m304 [90m13ms[0m
 [90mGET /common.css [36m304 [90m5ms[0m
 [90mGET /landing.css [36m304 [90m3ms[0m
 [90mGET /landing.js [36m304 [90m3ms[0m
+[90mPOST /access [32m200 [90m21ms - 40b[0m
+[90mGET /home [36m304 [90m12ms[0m
+[90mGET /home.css [36m304 [90m2ms[0m
+[90mGET /common.css [36m304 [90m4ms[0m
+[90mGET /modals.css [36m304 [90m4ms[0m
+[90mGET /home.js [36m304 [90m4ms[0m
+[90mGET /modals.js [36m304 [90m4ms[0m
+[90mGET /tem_home_BG.jpg [36m304 [90m3ms[0m
+[90mPOST /login [32m200 [90m268ms - 43b[0m
+[90mGET /profile [36m302 [90m4ms - 70b[0m
+{ _id: 'kumarde@umich.edu',
+  name: 'Deepak Kumar',
+  pass: '$2a$10$fB2OhZtmTg.Sjdd1iAgxFecvrfhuxPAYDbDFnBBm/nmq3PKtAXfgS' }
+[90mGET /create [36m304 [90m5ms[0m
+[90mGET /createProfile.css [36m304 [90m5ms[0m
+[90mGET /common.css [36m304 [90m3ms[0m
+[90mGET /home.js [36m304 [90m3ms[0m
+[90mGET /create.js [36m304 [90m4ms[0m
+[90mGET /modals.js [36m304 [90m3ms[0m
+[90mGET /logo.png [36m304 [90m3ms[0m
 Express server listening on port 3000
 Express server listening on port 3000
 Express server listening on port 3000
 Express server listening on port 3000
 Express server listening on port 3000
 Express server listening on port 3000
+Express server listening on port 3000
+Express server listening on port 3000
+[90mPOST /addProfile [31m500 [90m14ms[0m
 Express server listening on port 3000
 Express server listening on port 3000
 Express server listening on port 3000
