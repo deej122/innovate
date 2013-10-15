@@ -27,7 +27,6 @@ $(document).ready(function(){
 	});
 	$('.join').click(function(){
 		var id = $(this).attr('data-id');
-		alert(id);
 		$.ajax({
 			url:'/joinProject',
 			type: 'POST',
