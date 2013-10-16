@@ -17,6 +17,14 @@ exports.index = function(req, res){
   }
 };
 
+exports.about = function(req, res){
+  	res.render('about', { title: 'innovate' });
+};
+
+exports.access = function(req, res){
+  	res.render('access', { title: 'innovate' });
+};
+
 exports.home = function(req, res){
 	console.log(req.session);
 	if(req.session.access != "granted"){

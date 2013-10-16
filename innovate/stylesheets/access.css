@@ -1,0 +1,19 @@
+.infoLink{
+	padding-right: 80px;
+	padding-left: 80px;
+}
+
+#moreInfo{
+	margin-top: 7%;
+	float: right;
+	margin-right: 120px;
+}
+
+.method{
+	margin-top: 5%;
+	margin-left: 2%;
+}
+
+.explain{
+	font-size: 20px;
+}

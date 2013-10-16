@@ -31,6 +31,8 @@ if ('development' == app.get('env')) {
 //app.get('/view', routes.view);
 app.get('/', routes.index);
 app.get('/home', routes.home);
+app.get('/about', routes.about);
+app.get('/access', routes.access);
 app.get('/create', routes.create);
 app.get('/profile', routes.profile);
 app.get('/new', routes.new);
