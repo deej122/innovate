@@ -45,17 +45,16 @@ html{
 
 .contactLink{
 	width: 20%;
-	text-decoration: none;
-	color: #0084B4;
 }
 
-.contactLink:hover{
-	text-decoration: underline;
+.infoLink{
+	padding-right: 80px;
+	padding-left: 80px;
 }
 
-.contactLink:focus{
-	outline: none;
-	text-decoration: underline;
+#moreInfo{
+	margin-top: 5%;
+	text-align: center;
 }
 /*
 #skip{
