@@ -45,11 +45,15 @@ html{
 
 .contactLink{
 	width: 20%;
+	padding: 10px;
 }
 
 .infoLink{
-	padding-right: 80px;
+	padding: 10px;
+	width: 20%;
+/*	padding-right: 80px;
 	padding-left: 80px;
+*/
 }
 
 #moreInfo{
